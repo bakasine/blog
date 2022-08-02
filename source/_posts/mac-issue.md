@@ -8,9 +8,10 @@ categories:
     - mac
 ---
 
-* [MySql问题](#mysql)
+* [MySQL问题](#mysql)
+* [Docker问题](#docker)
 
-### <h2 id="mysql">MySql</h2>
+### <h2 id="mysql">MySQL</h2>
 
 * 通过docker安装mysql
 
@@ -29,3 +30,17 @@ update user set host='%' where user='root';
 
 flush privileges;
 ```
+
+### <h2 id="docker">Docker</h2>
+
+* 通过docker安装nginx
+
+``` bash
+// m1的docker容器与windows不同，类似于虚拟机
+// 容器访问宿主机不能直接使用localhost要使用
+docker.for.mac.host.internal
+
+```
+
+
+
