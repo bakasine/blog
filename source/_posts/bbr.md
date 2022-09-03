@@ -1,5 +1,5 @@
 ---
-title: 一键安装最新内核并开启 BBR 脚本
+title: bbr加速
 date: 2018-06-27 14:16:24
 tags: 
     - bbr
@@ -7,6 +7,27 @@ tags:
 categories: 
     - linux
 ---
+
+> 更新于 2022-09-03 17:22:21
+
+
+# <h2 id="openbbr">开启BBR</h2>
+
+linux内核版本大于4.9的系统自带的bbr
+
+* Debian 9+
+* Ubuntu 17.04+
+* CentOS 8+
+
+``` bash
+echo net.core.default_qdisc=fq >> /etc/sysctl.conf
+echo net.ipv4.tcp_congestion_control=bbr >> /etc/sysctl.conf
+sysctl -p
+```
+
+验证执行`sysctl net.ipv4.tcp_available_congestion_control` 输出 `net.ipv4.tcp_available_congestion_control = bbr cubic reno` 就成功开启 
+
+-------------------------------------------
 
 > 本脚本适用环境
 

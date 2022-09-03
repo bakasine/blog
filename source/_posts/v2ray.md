@@ -6,7 +6,7 @@ tags:
         - debian
         - ubuntu
 categories: 
-        - linux
+        - proxy
 ---
 
 > 注意

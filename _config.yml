@@ -7,14 +7,14 @@ title: 香香鸡腿堡
 subtitle: 星期五晚上进来的人都有一个原因 ––––– 香香鸡。
 description: ''
 keywords:
-author: Vertex
+author: Wesker
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://hentai121.github.io/vertex/
-root: /vertex
+url: https://hentai121.github.io/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,5 +104,5 @@ theme: hexo-theme-gal
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:hentai121/vertex.git
+  repo: git@github.com:hentai121/hentai121.github.io.git
   branch: master
