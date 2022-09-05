@@ -36,7 +36,7 @@ reboot
 输入 `sysctl net.ipv4.tcp_available_congestion_control` 返回 `net.ipv4.tcp_available_congestion_control = bbr cubic reno` 
 
 
--------------------------------------------
+-------------------------旧脚本已不推荐使用-------------------------
 
 > 本脚本适用环境
 
