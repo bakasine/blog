@@ -149,7 +149,7 @@ chmod a+w /home/xray/xray_log/*.log
 ```
 
 # <h3>模板文件修改</h3>
-[配置文件模板库](#https://github.com/XTLS/Xray-examples)
+[配置文件模板库](https://github.com/XTLS/Xray-examples)
 ``` bash
 wget https://raw.githubusercontent.com/XTLS/Xray-examples/main/Trojan-TCP-XTLS/config_server.json -O /usr/local/etc/xray/config.json
 
