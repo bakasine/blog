@@ -1,7 +1,7 @@
 # use_logo如果为true, 需要在logo_image设置路径
 use_logo: false
 logo_image: logo.png # 使用路径, 填写文件名即可(比如, logo_image: logo.png 指向 source/imgs/logo.png)
-navbar_text: UerAx # 如果没有Logo, 则设置为false, 并且设置navbar_text(否则默认为站点标题, 最好进行设置)
+navbar_text: CrayfishRun # 如果没有Logo, 则设置为false, 并且设置navbar_text(否则默认为站点标题, 最好进行设置)
 
 # 必填, 设定小型设备展示背景图, 指向source/imgs, 比如xs_bg_image: bg.png -> source/imgs/bg.png
 xs_bg_image: xsbg.gif
@@ -52,6 +52,13 @@ default_preview:
   - preview2.jpg
   - preview3.jpg
   - preview4.jpg
+  - preview5.jpg
+  - preview6.jpg
+  - preview7.jpg
+  - preview8.jpg
+  - preview9.jpg
+  - preview10.jpg
+  - preview11.jpg
 
 # 侧边栏
 sidebar:
@@ -65,7 +72,7 @@ sidebar:
 
 # 友情链接配置, 要先开启上面的friend_links
 friend_links:
-  - name: UerAx
+  - name: hentai
     link: https://github.com/hentai121
     
 
@@ -104,7 +111,7 @@ slide_background:
   # use_url: false情况下, 采用本地博客图片路径, 下面三个参数组合指向: source/imgs/slide/background(1~6).jpg
   prefix: slide/background
   ext: jpg
-  max_count: 6
+  max_count: 8
 
 
 # 是否开启欧尼酱功能
