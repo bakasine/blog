@@ -3,6 +3,8 @@ title: xray架设trojan节点
 date: 2022-09-03 11:27:45
 tags:
 	- trojan
+categories: 
+    - tools
 ---
 
 
@@ -22,7 +24,7 @@ mkdir -p /home/xray/webpage/ && cd /home/xray/webpage/
 wget -O web.zip --no-check-certificate https://html5up.net/phantom/download && unzip web.zip && rm web.zip
 ```
 
-修改nginx.conf
+**修改nginx.conf**
 
 ``` bash
 vim /etc/nginx/nginx.conf
