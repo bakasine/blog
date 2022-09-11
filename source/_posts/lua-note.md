@@ -13,6 +13,11 @@ categories:
 [__四.流程控制__](#processctl)
 [__五.函数__](#function)
 [__六.String库__](#string)
+[__七.模块__](#module)
+[__八.元表__](#metatable)
+[__九.协程__](#coroutine)
+[__十.文件IO__](#io)
+[__十一.面向对象__](#object)
 
 
 # <h2 id="install">一.安装lua</h2>
@@ -41,8 +46,8 @@ __Windows__
 xint, xfloat = 10, 10.1     --number
 local name = "Crayfish Run" --string "" or ''
 local names = [[            --string [[字符串块]]
-line1
-line2
+    line1
+    line2
 ]]
 local isAlive = true     --boolean
 local a = nil            --no value or invalid value
@@ -194,4 +199,104 @@ end
 
 # <h2 id="string">六.String库</h2>
 
+```lua
+string.upper("a") -- A
+string.lower("A") -- a
+string.gsub("aaaa", "a", "c", 3) -- ccca 把aaaa的前三个a替换成c, 3可省略, 省略为全部替换
+string.find("abcde", "bc", 1) -- 2 3 查找abcde的bc索引位置,从索引1开始查找. 1可省略,默认为从头开始查找
+string.reverse("12345") -- 54321
+string.format("xxx:%d", 1) -- xxx:1
+string.byte("A")    -- 65   多个值取第一个
+string.char(65)     -- A    多个值连接
+string.len("123")   -- 3
+string.rep("123", 2)    -- 123123 复制2个123并连接
+```
 
+# <h2 id="module">七.模块</h2>
+
+__自定义模块__
+
+```lua
+-- 文件名为 module.lua
+-- 定义一个名为 module 的模块
+module = {}
+ 
+-- 定义一个常量
+module.constant = "const"
+ 
+-- 定义一个函数
+function module.func1()
+    print("func1")
+end
+
+-- local私用化声明
+local function func2()
+    print("这是一个私有函数！")
+end
+
+function module.func3()
+    func2()
+end
+ 
+return module
+```
+
+__加载模块__
+
+```lua
+local m = require("module")
+print(m.constant)
+m.func1()
+```
+
+__加载路径默认为LUA_PATH,需要手动配置__
+
+# <h2 id="metatable">八.元表</h2>
+
+__相当于重写表的基本操作函数__
+
+```lua
+-- table原生不支持 +,- 等操作,需要通过元表
+-- 声明元表
+local mt = {}
+
+-- 对元表添加_add方法，用于描述+法操作
+mt.__add = function(a, b)
+    local res = {}
+    
+    statement
+
+    return res
+end
+
+t1 = {1,2,3}
+t2 = {2,3,4}
+setmetatable(t1, mt)
+t3 = t1 + t2 -- 3,5,7
+```
+
+<h3>支持的元方法</h3>
+
+| `元方法`     | `运算符`     | 
+| ----------- | ----------- |
+| __add       | +           |
+| __mul	      | *           |
+| __sub	      | -           |
+| __div	      | /           |
+| __unm		  | !           |
+| __mod		  | %           |
+| __pow	      | ^           |
+| __concat	  | ..          |
+| __eq        | ==          |
+| __lt        | <           |
+| __le        | <=          |
+| __tostring  | 输出字符串    |
+| __call	  | 函数调用      |
+| __index	  | 调用索引值    |
+| __newindex  | 赋值         |
+
+# <h2 id="coroutine">九.协程</h2>
+
+# <h2 id="io">十.文件IO</h2>
+
+# <h2 id="object">十一.面向对象</h2>
