@@ -96,7 +96,7 @@ use_issue: true
 # monokai_sublime
 # atom-one-dark
 # darcula
-highlight_theme: monokai_sublime
+highlight_theme: railscasts
 
 # 背景图功能
 # 必填项
