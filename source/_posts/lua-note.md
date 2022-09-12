@@ -18,6 +18,7 @@ categories:
 [__九.协程__](#coroutine)
 [__十.文件IO__](#io)
 [__十一.面向对象__](#object)
+[__十二.错误处理__](#error)
 
 
 # <h2 id="install">一.安装lua</h2>
@@ -297,6 +298,190 @@ t3 = t1 + t2 -- 3,5,7
 
 # <h2 id="coroutine">九.协程</h2>
 
+```lua
+-- 创建coroutine
+co = coroutine.create(
+    function(i)
+        print(i)
+    end
+)
+
+coroutine.status()        -- 查看 coroutine 的状态 dead，suspended，running
+-- 创建 coroutine，返回一个函数，一旦你调用这个函数，就进入 coroutine
+cw = coroutine.wrap(
+    function(i)
+        print(i)
+    end
+)
+cw(1)                   -- 1
+
+-- 需要在 coroutine的方法中,可以使其挂起.
+coroutine.yield()
+coroutine.resume(co, 1)   -- 重启 coroutine
+-- 返回正在跑的 coroutine，一个 coroutine 就是一个线程，当使用running的时候，就是返回一个 corouting 的线程号
+coroutine.running()
+
+```
+
 # <h2 id="io">十.文件IO</h2>
 
+| __参数__     | __效果__     | 
+| ----------- | ----------- |
+| r |	以只读方式打开文件，该文件必须存在。|
+|w	|打开只写文件，若文件存在则文件长度清为0，即该文件内容会消失。若文件不存在则建立该文件。|
+|a	|以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾|
+|r+	|以可读写方式打开文件，该文件必须存在。|
+|w+	|打开可读写文件，若文件存在则文件长度清为零，即该文件内容会消失。若文件不存在则建立该文件。|
+|a+	|与a类似，但此文件可读可写|
+|b	|二进制模式，如果文件是二进制文件，可以加上b|
+|+	|号表示对文件既可以读也可以写|
+
+```lua
+-- 只读
+file = io.open("file", "r")
+-- 输出文件第一行
+print(file:read())
+
+file:flush() -- 刷新
+
+-- 关闭打开的文件
+file:close()
+
+-- 以附加的方式打开只写文件
+file = io.open("test.lua", "a")
+
+-- 在文件最后一行添加 Lua 注释
+file:write("--test")
+```
+
+__read()的参数__
+
+| __参数__     | __效果__     | 
+| ----------- | ----------- |
+| a       | 读取文件全部内容   |
+| l	      | 表示读取一行，不带换行符           |
+| L	      | 表示读取一行，带换行符           |
+| n	      | 表示读取一个数字     |
+| num     | 表示读取num个字符,num表示数字|
+
+``` lua
+-- 读取全部
+file:read("a")
+```
+
+
 # <h2 id="object">十一.面向对象</h2>
+
+# <h3>创建类</h3>
+
+```lua
+-- lua 中的类可以通过 table + function 模拟出
+Clz = {p = 0}
+function Clz.paramMinus(v)
+    print(Clz.p - v)
+end
+
+Clz.paramMinus(10)   -- -10
+
+-- 对象
+Object = {param = 0}
+
+-- 派生类的方法 new
+function Object:new (o, param)
+  o = o or {}   -- 如果 o 为 false 或 nil ，则 o ={} 
+  setmetatable(o, self)
+  self.__index = self
+  self.param = param
+  return o
+end
+
+-- 基础类方法 printArea
+function Object:printP ()
+  print(self.param)
+end
+
+-- 创建对象
+myobj = Object:new(nil,10)
+myobj:printP() -- 10
+
+```
+
+`.`和`:`调用的区别在于默认self
+
+```lua
+clz = {v=0}
+function clz.add(self, v)
+    self.v = self.v + v
+end
+clz.add(clz, v)
+-- 上下方法一致
+function clz:add(v)
+    self.v = self.v + v
+end
+clz:add(v)
+
+```
+
+# <h3>继承</h3>
+
+```lua
+clz = {v=0}
+function clz:new(o, v)
+    o = o or {}
+    metatable(o, self)
+    self.__index =self
+    self.v = v
+    return 0
+end
+
+function clz:add(v)
+    self.v = self.v + v
+end
+
+-- 继承
+
+ext = clz:new(nil,1)
+function ext:new(o, v)
+    o = o or clz:new(o, v)
+    setmetatable(o, self)
+    self.__index=self
+    return o
+```
+
+# <h2 id="error">十二.错误处理</h2>
+
+# <h3>error</h3>
+
+```lua
+-- 抛出异常
+error("msg")
+```
+# <h3>assert</h3>
+
+```lua
+-- assert是一个断言, 包装error实现. 它会中断当前流程, 可省略抛出信息参数
+assert(type(a) == "number", "抛出的错误信息")
+```
+
+# <h3>pcall 和 xpcall、debug</h3>
+
+```lua
+if pcall(function, ...) then
+-- 没有错误
+else
+-- 一些错误
+end
+
+-- 传入第一个值为函数，后面的则为参数
+pcall(function(i) print(i) end, 33) -- true 或者 false stdin:1: error..
+
+-- 即java的catch
+-- 传入第一个值为函数，第二个为报错函数(自动传入err消息)，后面则为参数
+
+-- debug.traceback：根据调用桟来构建一个扩展的错误消息
+xpcall(function(i) print(i) error('error..') end, function() print(debug.traceback()) end, 33)
+-- stack traceback: ...    false nil
+```
+
+
+
