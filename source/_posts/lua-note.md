@@ -1,5 +1,5 @@
 ---
-title: lua-note
+title: lua笔记
 date: 2022-09-10 00:43:24
 tags:
     - lua
@@ -45,10 +45,10 @@ __Windows__
 -- local为局部变量, 不做声明默认为全局变量
 xint, xfloat = 10, 10.1     --number
 local name = "Crayfish Run" --string "" or ''
-local names = [[            --string [[字符串块]]
+local names = [[            
     line1
     line2
-]]
+]]			 --string [[字符串块]]
 local isAlive = true     --boolean
 local a = nil            --no value or invalid value
 local talbe = {}         --table

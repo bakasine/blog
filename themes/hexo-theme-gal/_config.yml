@@ -96,7 +96,7 @@ use_issue: true
 # monokai_sublime
 # atom-one-dark
 # darcula
-highlight_theme: darcula
+highlight_theme: monokai_sublime
 
 # 背景图功能
 # 必填项
@@ -111,7 +111,7 @@ slide_background:
   # use_url: false情况下, 采用本地博客图片路径, 下面三个参数组合指向: source/imgs/slide/background(1~6).jpg
   prefix: slide/background
   ext: jpg
-  max_count: 8
+  max_count: 6
 
 
 # 是否开启欧尼酱功能

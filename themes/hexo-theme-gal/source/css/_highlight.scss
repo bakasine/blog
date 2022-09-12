@@ -428,4 +428,6 @@ $highlight_theme: hexo-theme-config('highlight_theme');
       text-decoration: underline;
     }
   }
-}
+} 
+// @else if $highlight_theme == mac-white {
+// }
