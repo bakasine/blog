@@ -1,32 +1,45 @@
-# hexo-theme-gal
+# gal-theme
 
-在 [ZEROKISEKI/hexo-theme-gal](https://github.com/ZEROKISEKI/hexo-theme-gal) 上增强一些功能, 原项目是[忧郁的弟弟](https://www.kkgal.com/)网站主题WordPress的hexo移植版本
+在 [fnsflm/hexo-theme-gal](https://github.com/fnsflm/hexo-theme-gal) 修改了一些内容, 原项目是[忧郁的弟弟](https://www.kkgal.com/)网站主题WordPress的hexo移植版本
 
 详细说明和使用方法见[wiki](https://github.com/fnsflm/hexo-theme-gal/wiki)
 
-个人站点: https://fnsflm.xyz
-![026](https://user-images.githubusercontent.com/49244492/110194893-fc0e4880-7e75-11eb-87b3-d98943c2216f.jpg)
+[个人站点](hentai121.github.io)
 
 
 **更新:**
 
-1. 添加live2d
+1. 添加markdown的列表格式
 
-基于项目: https://github.com/stevenjoezhang/live2d-widget
+[列表格式](./list.png)
 
-在主题配置`_config.yml`设置为true即可
-```
-use_l2d: true
-```
-如若要修改样式, 在`source/live2d/waifu.css`修改
+2. 添加mac代码块格式
 
-如若要修改对话, 在 `source/live2d/waifu-tips.json`修改
+[mac代码块](./mac.png)
 
+3. 还有一些小bug的修复
 
-2. gitment改用gitalk
+# 主题安装流程
 
-[评论系统配置说明](https://github.com/fnsflm/hexo-theme-gal/wiki/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E)
+gal-theme安装问题
 
-3. 修改代码行数槽过长的问题
-
-![022](https://user-images.githubusercontent.com/49244492/109394345-7d8b4580-7961-11eb-9b83-499dd8ce726c.jpg)
+	1.新本版node的npm版本太高，sass不能支持，最高只能使用版本7的npm。可以下载v16.10的node。
+		版本太高可以尝试一下命令回退
+			npm install npm@7.20.0 -g
+			
+	2.国内网络会导致下载各种依赖出问题通过一下命令修改源
+	    下载国外的资源众所周知的慢，常用设置镜像
+		yarn全局安装及设置镜像
+			npm install -g yarn
+			yarn config set registry http://registry.npm.taobao.org/ -g
+			yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+			npm config set registry https://registry.npm.taobao.org
+			npm config get registry // 查看是否配置成功
+			npm config list  // 查看npm当前配置
+			npm cache clear --force // 强制清除缓存
+        然后再安装gal-theme的依赖
+			yarn add hexo-renderer-sass
+			yarn add hexo-renderer-scss
+			cnpm install hexo-generator-json-content --save
+		如果 hexo g 后 sass 还是报错可以改用 cnpm 安装
+		    cnpm install node-sass

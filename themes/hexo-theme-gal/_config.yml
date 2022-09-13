@@ -12,7 +12,8 @@ author_image: avatar.jpg
 
 # 程序员模式, 适合于用该程序的爱好写技术文章的人员, 默认不开启
 # 选择开启后将会改变article-excerpt, article-content等的显示
-programmer_mode: false
+programmer_mode: true
+
 
 # 导航菜单
 menu:
@@ -97,6 +98,9 @@ use_issue: true
 # atom-one-dark
 # darcula
 highlight_theme: railscasts
+
+#开启mac代码块 on 关闭为off
+mac_style: on
 
 # 背景图功能
 # 必填项

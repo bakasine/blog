@@ -23,22 +23,27 @@ categories:
 
 # <h2 id="install">一.安装lua</h2>
 
-__Mac__
+<h3>Mac</h3>
 
 ```bash
 brew update
 brew install lua
 ```
 
-__Linux__
+<h3>Linux</h3>
 
 ```bash
 sudo apt update && sudo apt install lua5.3
 ```
 
-__Windows__
+<h3>Windows</h3>
 
-[安装包](https://github.com/rjpcomputing/luaforwindows/releases)
+[官方已编译包](http://luabinaries.sourceforge.net/download.html)
+
+`下载lua-5.4.2_Win64_bin.zip` -> `解压到path` -> `配置环境变量为path`
+
+
+**也可以直接通过**[安装包](https://github.com/rjpcomputing/luaforwindows/releases) **安装**
 
 # <h2 id="variables">二.基本变量</h2>
 
@@ -55,7 +60,7 @@ local a = nil            --no value or invalid value
 local talbe = {}         --table
 ```
 
-__可以使用 type 函数测试变量类型__
+<h3>可以使用 type 函数测试变量类型<h3>
 
 ```lua
 print(type(123))    -- number
@@ -63,7 +68,7 @@ print(type('123'))  -- string
 print(type(print))  -- function
 ```
 
-__lua对数字字符进行算术运算的逻辑会将字符串转换成数字进行运算__
+<h3>lua对数字字符进行算术运算的逻辑会将字符串转换成数字进行运算<h3>
 
 ```lua
 print("2" + 6) -- 8
@@ -72,22 +77,22 @@ print("2" - 6) -- -4
 print("-2e2" * "6") -- -1200.0
 ```
 
-__字符串的连接采用'..'__
+<h3>字符串的连接采用'..'<h3>
 
 ```lua
 print("2" .. "6") -- 8
 print(2 .. 6) -- 8
 ```
 
-__字符串长度采用#获取__
+<h3>字符串长度采用#获取<h3>
 
 ```lua
 print(#'123') -- 3
 ```
 
-# <h3>table 表</h3>
+<h3>table 表</h3>
 
-__表其实就是一种数组+Map,不过和其他语言不同,他的初始index从1开始__
+<h4>表其实就是一种数组+Map,不过和其他语言不同,他的初始index从1开始<h4>
 
 ```lua
 t = {1,2,3,4,5}                 -- 定义一个表可以看做 [1,2,3,4,5]
@@ -117,7 +122,7 @@ print(not true)         -- 逻辑非 取反!
 
 # <h2 id="processctl">四.流程控制</h2>
 
-__if__
+<h3>if<h3>
 
 ```lua
 if (condition) then
@@ -131,7 +136,7 @@ end
 
 # <h3>循环</h3>
 
-__while__
+<h3>while<h3>
 
 ```lua
 -- 条件为真时循环
@@ -140,7 +145,7 @@ while (condition) do
 end
 ```
 
-__for__
+<h3>for<h3>
 
 ```lua
 -- 可以看做其他语言的 for i=10; i!=1; i+=-1
@@ -156,7 +161,7 @@ for i, v in ipairs(a) do
 end
 ```
 
-__repeat__
+<h3>repeat<h3>
 
 ```lua
 -- java的do while
@@ -215,7 +220,7 @@ string.rep("123", 2)    -- 123123 复制2个123并连接
 
 # <h2 id="module">七.模块</h2>
 
-__自定义模块__
+<h3>自定义模块<h3>
 
 ```lua
 -- 文件名为 module.lua
@@ -242,7 +247,7 @@ end
 return module
 ```
 
-__加载模块__
+<h3>加载模块<h3>
 
 ```lua
 local m = require("module")
@@ -250,11 +255,11 @@ print(m.constant)
 m.func1()
 ```
 
-__加载路径默认为LUA_PATH,需要手动配置__
+<h3>加载路径默认为LUA_PATH,需要手动配置<h3>
 
 # <h2 id="metatable">八.元表</h2>
 
-__相当于重写表的基本操作函数__
+<h3>相当于重写表的基本操作函数<h3>
 
 ```lua
 -- table原生不支持 +,- 等操作,需要通过元表
@@ -354,7 +359,7 @@ file = io.open("test.lua", "a")
 file:write("--test")
 ```
 
-__read()的参数__
+<h3>read()的参数<h3>
 
 | __参数__     | __效果__     | 
 | ----------- | ----------- |
@@ -372,7 +377,7 @@ file:read("a")
 
 # <h2 id="object">十一.面向对象</h2>
 
-# <h3>创建类</h3>
+<h3>创建类</h3>
 
 ```lua
 -- lua 中的类可以通过 table + function 模拟出
@@ -406,7 +411,7 @@ myobj:printP() -- 10
 
 ```
 
-`.`和`:`调用的区别在于默认self
+<h3>`.`和`:`调用的区别在于默认self<h3>
 
 ```lua
 clz = {v=0}
@@ -422,7 +427,7 @@ clz:add(v)
 
 ```
 
-# <h3>继承</h3>
+<h3>继承</h3>
 
 ```lua
 clz = {v=0}
@@ -450,20 +455,20 @@ function ext:new(o, v)
 
 # <h2 id="error">十二.错误处理</h2>
 
-# <h3>error</h3>
+<h3>error</h3>
 
 ```lua
 -- 抛出异常
 error("msg")
 ```
-# <h3>assert</h3>
+<h3>assert</h3>
 
 ```lua
 -- assert是一个断言, 包装error实现. 它会中断当前流程, 可省略抛出信息参数
 assert(type(a) == "number", "抛出的错误信息")
 ```
 
-# <h3>pcall 和 xpcall、debug</h3>
+<h3>pcall 和 xpcall、debug</h3>
 
 ```lua
 if pcall(function, ...) then

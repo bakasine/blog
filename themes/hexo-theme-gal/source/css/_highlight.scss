@@ -5,7 +5,9 @@
  * Copyright (c) 2022 by wesker hentai121@163.com, All Rights Reserved. 
  */
 $highlight_theme: hexo-theme-config('highlight_theme');
+$mac_style: hexo-theme-config('mac_style');
 
+@if $mac_style == on {
 figure {
   padding-top: 26px;
 }
@@ -20,6 +22,7 @@ figure::before {
   margin-top: -15px;
   position: absolute;
   width: 12px;
+}
 }
 
 @if $highlight_theme == github {
