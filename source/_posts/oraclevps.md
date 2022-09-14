@@ -9,7 +9,7 @@ categories:
 
 [注册](#register)
 [创建实例](#instance)
-[重装系统](#reos)
+[~~重装系统~~优化系统](#reos)
 [后记](#postscript)
 
 # <h2 id="register">注册</h2>
@@ -20,7 +20,7 @@ categories:
 # <h2 id="instance">创建实例</h2>
 
 `Launch resources` --> `Create a VM instance` --> `Image and shape` --> `Add SSH keys` --> `Boot volume` --> `Specify a...` 
-# <h2 id="reos">重装系统</h2>
+# <h2 id="reos">优化系统</h2>
 
 _dd系统后出现失联的情况, 推荐使用原生系统关闭防火墙使用__
 
@@ -50,6 +50,33 @@ systemctl disable oracle-cloud-agent-updater
 # 停止firewall并禁止自启动
 systemctl stop firewalld.service
 systemctl disable firewalld.service
+```
+
+__配置密码登录__
+
+```shell
+# 配置root密码
+sudo passwd root
+
+# 修改sshd_config配置
+vim /etc/ssh/sshd_config
+
+PermitRootLogin yes
+PasswordAuthentication yes
+
+# vim end
+
+sudo service sshd restart
+
+```
+
+__通过脚本修改__
+
+```bash
+echo root:你的密码 |sudo chpasswd root
+sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
+sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
+sudo service sshd restart
 ```
 
 ---
