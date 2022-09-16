@@ -13,7 +13,7 @@ categories:
 
 # <h2 id="tool">一.下载Dota2 Workshop Tools</h2>
 
-[官方页面](https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools)
+[官方页面](https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools:zh-cn)
 
 __1.安装方式__
 	

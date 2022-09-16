@@ -15,10 +15,14 @@ categories:
 [配置Xray](#configurate)
 [优化](#optimization)
 
+
 # <h2 id="nginx">安装nginx</h2>
 
+* __不推荐centos, 太折腾了__
+
 ``` bash
-sudo apt update && sudo apt install -y nginx
+# ubuntu debian
+sudo apt update && sudo apt install -y nginx 
 mkdir -p /home/xray/webpage/ && cd /home/xray/webpage/
 # https://html5up.net/ 随便找一个
 wget -O web.zip --no-check-certificate https://html5up.net/phantom/download && unzip web.zip && rm web.zip
@@ -27,14 +31,21 @@ wget -O web.zip --no-check-certificate https://html5up.net/phantom/download && u
 **修改nginx.conf**
 
 ``` bash
-vim /etc/nginx/nginx.conf
 
+# 去除80端口默认占用
+sed -i '/\/etc\/nginx\/sites-enabled\//d' /etc/nginx/nginx.conf
+
+# 复制全部 start
+cat>/etc/nginx/conf.d/xray.conf<<EOF
 server {
-    listen 80;
-		server_name 你的域名;
-		root /home/xray/webpage/;
-		index index.html;
+	listen 80;
+	server_name 你的域名;
+	root /home/xray/webpage/;
+	index index.html;
 }
+EOF
+# 复制全部 end
+
 
 systemctl reload nginx
 
@@ -44,8 +55,7 @@ systemctl reload nginx
 # <h2 id="tls">申请证书</h2>
 
 ``` bash
-wget -O -  https://get.acme.sh | sh
-. .bashrc
+wget -O -  https://get.acme.sh | sh && cd ~ && . .bashrc
 acme.sh --upgrade --auto-upgrade
 acme.sh --issue --server letsencrypt --test -d 你的域名 -w /home/xray/webpage --keylength ec-256
 # 显示证书和4行cert才成功
@@ -55,14 +65,12 @@ acme.sh --issue -d 你的域名 -w /home/xray/webpage --keylength ec-256 --force
 
 ```
 
+
 # <h2 id="install">安装Xray</h2>
 
 # <h3>脚本安装</h3>
 ``` bash
-wget https://github.com/XTLS/Xray-install/raw/main/install-release.sh
-
-bash install-release.sh
-rm install-release.sh
+wget https://github.com/XTLS/Xray-install/raw/main/install-release.sh && bash install-release.sh && rm install-release.sh
 
 ```
 
@@ -71,14 +79,11 @@ rm install-release.sh
 [xray包](https://p4gefau1t.github.io/trojan-go/basic/full-config/)
 
 ``` bash
-wget https://github.com/XTLS/Xray-core/releases/download/v1.5.10/Xray-linux-64.zip -O xray.zip
-
 # 解压到root目录下的xray文件夹 
-unzip xray.zip -d /root/xray/ && rm xray.zip
+wget https://github.com/XTLS/Xray-core/releases/download/v1.5.10/Xray-linux-64.zip -O xray.zip && unzip xray.zip -d /root/xray/ && rm xray.zip
 
-# 创建 systemd 部署
-vim /etc/systemd/system/xray.service
-
+# 创建 systemd 部署 start
+cat>/etc/systemd/system/xray.service<<EOF
 [Unit]
 Description=Xray Service
 Documentation=https://github.com/xtls
@@ -95,25 +100,21 @@ LimitNPROC=10000
 LimitNOFILE=1000000
 [Install]
 WantedBy=multi-user.target
-
+EOF
+# end
 ```
 
 # <h2 id="usetls">给Xray配置TLS证书</h2>
 
 ``` bash
-mkdir /home/xray/xray_cert
-acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key
-chmod +r /home/xray/xray_cert/xray.key
+mkdir /home/xray/xray_cert && acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key && chmod +r /home/xray/xray_cert/xray.key
 ```
 
 # <h3>自动更新临期证书</h3>
 
-
 ``` bash
-vim /home/xray/xray_cert/xray-cert-renew.sh
-```
-复制以下内容
-``` bash
+# 创建并写入
+cat>/home/xray/xray_cert/xray-cert-renew.sh<<EOF
 #!/bin/bash
 
 /root/.acme.sh/acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key
@@ -124,13 +125,13 @@ echo "Read Permission Granted for Private Key"
 
 sudo systemctl restart xray
 echo "Xray Restarted"
+EOF
 ```
 
 创建定时任务
 
 ``` bash
-chmod +x /home/xray/xray_cert/xray-cert-renew.sh
-crontab -e
+chmod +x /home/xray/xray_cert/xray-cert-renew.sh && crontab -e
 
 #添加以下内容到最底部
 # 1:00am, 1st day each month, run `xray-cert-renew.sh`
@@ -144,9 +145,7 @@ xray uuid
 
 # 自定义日志 可选 start
 # 默认日志位置 /var/log/xray
-mkdir /home/xray/xray_log
-touch /home/xray/xray_logaccess.log && touch /home/xray/xray_log/error.log
-chmod a+w /home/xray/xray_log/*.log
+mkdir /home/xray/xray_log && touch /home/xray/xray_log/access.log && touch /home/xray/xray_log/error.log && chmod a+w /home/xray/xray_log/*.log
 # end
 ```
 
@@ -160,8 +159,7 @@ wget https://raw.githubusercontent.com/XTLS/Xray-examples/main/Trojan-TCP-XTLS/c
 
 ``` bash
 // 脚本安装方式
-systemctl start xray
-systemctl enable xray
+systemctl start xray && systemctl enable xray
 // 手动安装方式
 
 ```
