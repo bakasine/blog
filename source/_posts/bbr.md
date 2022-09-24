@@ -24,6 +24,9 @@ linux内核版本大于4.9的系统自带的bbr
 echo 'deb http://deb.debian.org/debian buster-backports main' >> /etc/apt/sources.list
 apt update && apt -t buster-backports install linux-image-amd64
 
+# 如果提示NO_PUBKEY 把key复制到以下命令
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 你的key
+
 echo net.core.default_qdisc=fq >> /etc/sysctl.conf
 echo net.ipv4.tcp_congestion_control=bbr >> /etc/sysctl.conf
 sysctl -p
