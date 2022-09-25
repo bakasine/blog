@@ -154,6 +154,10 @@ mkdir /home/xray/xray_log && touch /home/xray/xray_log/access.log && touch /home
 ``` bash
 wget https://raw.githubusercontent.com/XTLS/Xray-examples/main/Trojan-TCP-XTLS/config_server.json -O /usr/local/etc/xray/config.json
 
+sed -i 's/\/path\/to\/cert/\/home\/xray\/xray_cert\/xray.crt/' /usr/local/etc/xray/config.json
+
+sed -i 's/\/path\/to\/key/\/home\/xray\/xray_cert\/xray.key/' /usr/local/etc/xray/config.json
+
 ```
 # <h3>启动Xray</h3>
 
@@ -172,23 +176,31 @@ systemctl start xray && systemctl enable xray
 # <h3>开启 HTTP 自动跳转 HTTPS</h3>
 
 ``` bash
-vim /etc/nginx/nginx.conf
+
+sed -i '/\/home\/xray\/webpage\//d' /etc/nginx/conf.d/xray.conf
+sed -i '/index/d' /etc/nginx/conf.d/xray.conf
+
 # 在80端口规则最后加入 可同时删除root和index两行
-return 301 https://$http_host$request_uri;
+sed -i '3a \\treturn 301 https://$http_host$request_uri;' /etc/nginx/conf.d/xray.conf
 
 #在加入新的server
+cat>>/etc/nginx/conf.d/xray.conf<<EOF
 server {
    listen 127.0.0.1:8080;
    root /home/xray/webpage/;
    index index.html;
    add_header Strict-Transport-Security "max-age=63072000" always;
 }
-
+EOF
 #end
 
 systemctl restart nginx
 
 #修改xray的fallback端口为8080 "dest": 80 -> 改成 "dest": 8080
-vim /usr/local/etc/xray/config.json
+sed -i '19,24d' /usr/local/etc/xray/config.json
+
+sudo sed -i 's/\"dest\".*/"dest": 8080/g' /usr/local/etc/xray/config.json
+
+
 systemctl restart xray
 ```
