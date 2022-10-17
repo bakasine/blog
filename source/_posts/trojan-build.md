@@ -3,6 +3,7 @@ title: xray架设trojan节点
 date: 2022-09-03 11:27:45
 tags:
 	- trojan
+	- xray
 categories: 
     - tools
 ---
@@ -25,10 +26,10 @@ categories:
 sudo apt update && sudo apt install -y nginx 
 mkdir -p /home/xray/webpage/ && cd /home/xray/webpage/
 # https://html5up.net/ 随便找一个
-wget -O web.zip --no-check-certificate https://html5up.net/phantom/download && unzip web.zip && rm web.zip
+apt install unzip && wget -O web.zip --no-check-certificate https://html5up.net/phantom/download && unzip web.zip && rm web.zip
 ```
-
-**修改nginx.conf**
+ 
+<h3>修改nginx.conf</h3>
 
 ``` bash
 
@@ -39,13 +40,15 @@ sed -i '/\/etc\/nginx\/sites-enabled\//d' /etc/nginx/nginx.conf
 cat>/etc/nginx/conf.d/xray.conf<<EOF
 server {
 	listen 80;
-	server_name 你的域名;
+	server_name yourdomain;
 	root /home/xray/webpage/;
 	index index.html;
 }
 EOF
 # 复制全部 end
 
+# 你的域名 替换
+sed -i 's/yourdomain/你的域名'
 
 systemctl reload nginx
 
@@ -65,7 +68,6 @@ acme.sh --issue -d 你的域名 -w /home/xray/webpage --keylength ec-256 --force
 
 ```
 
-
 # <h2 id="install">安装Xray</h2>
 
 # <h3>脚本安装</h3>
@@ -76,7 +78,7 @@ wget https://github.com/XTLS/Xray-install/raw/main/install-release.sh && bash in
 
 # <h3>手动安装</h3>
 
-[xray包](https://p4gefau1t.github.io/trojan-go/basic/full-config/)
+# [xray包](https://p4gefau1t.github.io/trojan-go/basic/full-config/)
 
 ``` bash
 # 解压到root目录下的xray文件夹 
@@ -107,7 +109,7 @@ EOF
 # <h2 id="usetls">给Xray配置TLS证书</h2>
 
 ``` bash
-mkdir /home/xray/xray_cert && acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key && chmod +r /home/xray/xray_cert/xray.key
+mkdir -p /home/xray/xray_cert && acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key && chmod +r /home/xray/xray_cert/xray.key
 ```
 
 # <h3>自动更新临期证书</h3>
@@ -117,7 +119,7 @@ mkdir /home/xray/xray_cert && acme.sh --install-cert -d 你的域名 --ecc --ful
 cat>/home/xray/xray_cert/xray-cert-renew.sh<<EOF
 #!/bin/bash
 
-/root/.acme.sh/acme.sh --install-cert -d 你的域名 --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key
+/root/.acme.sh/acme.sh --install-cert -d yourdomain --ecc --fullchain-file /home/xray/xray_cert/xray.crt --key-file /home/xray/xray_cert/xray.key
 echo "Xray Certificates Renewed"
 
 chmod +r /home/xray/xray_cert/xray.key
@@ -126,9 +128,12 @@ echo "Read Permission Granted for Private Key"
 sudo systemctl restart xray
 echo "Xray Restarted"
 EOF
+
+# 你的域名 替换
+sed -i 's/yourdomain/你的域名/'
 ```
 
-创建定时任务
+<h3>创建定时任务</h3>
 
 ``` bash
 chmod +x /home/xray/xray_cert/xray-cert-renew.sh && crontab -e
@@ -150,7 +155,9 @@ mkdir /home/xray/xray_log && touch /home/xray/xray_log/access.log && touch /home
 ```
 
 # <h3>模板文件修改</h3>
-[配置文件模板库](https://github.com/XTLS/Xray-examples)
+
+# [配置文件模板库](https://github.com/XTLS/Xray-examples)
+
 ``` bash
 wget https://raw.githubusercontent.com/XTLS/Xray-examples/main/Trojan-TCP-XTLS/config_server.json -O /usr/local/etc/xray/config.json
 
@@ -171,7 +178,8 @@ systemctl start xray && systemctl enable xray
 # <h2 id="optimization">优化</h2>
 
 # <h3>开启bbr</h3>
-{% post_link bbr 开启bbr加速 %}
+
+# {% post_link bbr 开启bbr加速 %}
 
 # <h3>开启 HTTP 自动跳转 HTTPS</h3>
 
