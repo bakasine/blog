@@ -48,7 +48,7 @@ EOF
 # 复制全部 end
 
 # 你的域名 替换
-sed -i 's/yourdomain/你的域名'
+sed -i 's/yourdomain/你的域名/' /etc/nginx/conf.d/xray.conf
 
 systemctl reload nginx
 
@@ -130,17 +130,15 @@ echo "Xray Restarted"
 EOF
 
 # 你的域名 替换
-sed -i 's/yourdomain/你的域名/'
+sed -i 's/yourdomain/你的域名/'  /home/xray/xray_cert/xray-cert-renew.sh
 ```
 
 <h3>创建定时任务</h3>
 
 ``` bash
-chmod +x /home/xray/xray_cert/xray-cert-renew.sh && crontab -e
+chmod +x /home/xray/xray_cert/xray-cert-renew.sh
 
-#添加以下内容到最底部
-# 1:00am, 1st day each month, run `xray-cert-renew.sh`
-0 1 1 * *   bash /home/xray/xray_cert/xray-cert-renew.sh
+( crontab -l | grep -v "0 1 1 * *   bash /home/xray/xray_cert/xray-cert-renew.sh"; echo "0 1 1 * *   bash /home/xray/xray_cert/xray-cert-renew.sh" ) | crontab -
 ```
 
 # <h2 id="configurate">配置Xray</h2>
