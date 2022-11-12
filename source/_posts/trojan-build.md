@@ -8,7 +8,9 @@ categories:
     - tools
 ---
 
+> 2022-11-13 17:22:21 更新一键安装脚本
 
+[一键安装](#script)
 [安装Nginx](#nginx)
 [申请证书](#tls)
 [安装Xray](#install)
@@ -16,6 +18,11 @@ categories:
 [配置Xray](#configurate)
 [优化](#optimization)
 
+# <h2 id="script">一键安装</h2>
+
+```bash
+wget -N --no-check-certificate -q -O xray.sh "https://raw.githubusercontent.com/uerax/xray-script/master/xray.sh" && chmod +x xray.sh && bash xray.sh
+```
 
 # <h2 id="nginx">安装nginx</h2>
 
