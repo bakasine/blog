@@ -4,18 +4,18 @@
 
 详细说明和使用方法见[wiki](https://github.com/fnsflm/hexo-theme-gal/wiki)
 
-[个人站点](hentai121.github.io)
+[个人站点](https://hentai121.github.io/)
 
 
 **更新:**
 
 1. 添加markdown的列表格式
 
-[列表格式](./list.png)
+![列表格式](./list.png)
 
-2. 添加mac代码块格式
+2. 添加mac代码块格式(通过配置的mac_style进行开关),添加代码块复制功能
 
-[mac代码块](./mac.png)
+![mac代码块](./mac.png)
 
 3. 还有一些小bug的修复
 
@@ -43,3 +43,13 @@ gal-theme安装问题
 			cnpm install hexo-generator-json-content --save
 		如果 hexo g 后 sass 还是报错可以改用 cnpm 安装
 		    cnpm install node-sass
+			
+			
+# gitalk
+
+*评论在本地无法调试,需要部署后才能正常调试
+
+[创建](https://github.com/settings/applications/new)
+
+![配置](./comment.png)
+

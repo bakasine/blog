@@ -1,6 +1,6 @@
 # use_logo如果为true, 需要在logo_image设置路径
 use_logo: false
-logo_image: logo.png # 使用路径, 填写文件名即可(比如, logo_image: logo.png 指向 source/imgs/logo.png)
+logo_image:  # 使用路径, 填写文件名即可(比如, logo_image: logo.png 指向 source/imgs/logo.png)
 navbar_text: CrayfishRun # 如果没有Logo, 则设置为false, 并且设置navbar_text(否则默认为站点标题, 最好进行设置)
 
 # 必填, 设定小型设备展示背景图, 指向source/imgs, 比如xs_bg_image: bg.png -> source/imgs/bg.png
@@ -14,34 +14,33 @@ author_image: avatar.jpg
 # 选择开启后将会改变article-excerpt, article-content等的显示
 programmer_mode: true
 
-
 # 导航菜单
 menu:
   # index
-  - title: 首页
+  - title: " 首页"
     # 参照font-awesome官网的icon, 取后面一段(比如用fa-star这个图标, 那么这里的icon就填star)
     icon: home
     url: /
   # archives
-  - title: 归档
+  - title: " 归档"
     icon: archive
     url: archives
   # categories
-  - title: 分类
+  - title: " 分类"
     icon: list
     url: categories
     dropdown: 3 #dropdown为下拉菜单出现的项目最大数目(只限于tags和categorys)
     # 如果不想显示下拉菜单, 则不要填写, 即dropdown:
     # 具体效果可以看https://myau.moe
   # tags
-  - title: 标签
+  - title: " 标签"
     icon: tags
     url: tags
     dropdown: 3
   # about, 这个实际上是自定义page, 后面的自定义page参照about样式
-  - title: 关于我
+  - title: " 关于我"
     icon: user
-    url: https://github.com/hentai121
+    url: about
 
 # 每篇文章的preview默认图片
 # 必填项(除非你每篇文章的front-matter都设置了preview属性)
@@ -73,9 +72,10 @@ sidebar:
 
 # 友情链接配置, 要先开启上面的friend_links
 friend_links:
-  - name: hentai
+  - name: wesker
     link: https://github.com/hentai121
-    
+  - name: uerax
+    link: https://github.com/uerax
 
 # 个人链接配置, 要先开启上面的links
 links:
@@ -99,7 +99,7 @@ use_issue: true
 # darcula
 highlight_theme: railscasts
 
-#开启mac代码块 on 关闭为off
+# 指定是否开启mac风格代码块 on/off
 mac_style: on
 
 # 背景图功能
