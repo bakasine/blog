@@ -44,9 +44,9 @@ docker run -d \
     --restart=always \
     --name=kmfaka \
     -e DB_TYPE=Mysql \
-    -e DB_HOST=数据库ip地址或容器地址"172.17.0.1" \
-    -e DB_PORT=数据库端口 \
-    -e DB_USER=数据库用户名 \
+    -e DB_HOST="172.17.0.1" \
+    -e DB_PORT=3306 \
+    -e DB_USER=root \
     -e DB_PASSWORD=数据库用密码 \
     -e DB_DATABASE=数据库名 \
     -v /opt/kamifaka:/usr/src/app/public \
