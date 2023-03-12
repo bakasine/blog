@@ -21,13 +21,13 @@ __3.购买域名(可选)__
 
 # <h2 id="build">二.搭建</h2>
 
-`登录cloudflare` -> 点击左边列表的`page` -> 点击`创建项目`
+__`登录cloudflare` -> 点击左边列表的`page` -> 点击`创建项目`__
 
 ![1](img-hosting-1.png)
 
 __1.如果没有github,则下载 [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image/archive/refs/heads/main.zip) 点击`直接上传`, 跟着填写部署即可__
 
-__2.有github,则fork [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image) 项目, 然后点击`连接到Git`, 点击`添加账户`后登录你的Github同意绑定,然后选择一个存储库选择`Telegraph-Image`,最后点`开始设置`即可__
+__2.有github,则fork项目 [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image) , 然后点击`连接到Git`, 点击`添加账户`后登录你的Github同意绑定,然后选择一个存储库选择`Telegraph-Image`,最后点`开始设置`即可__
 
 # <h2 id="domain">三.域名绑定</h2>
 
