@@ -20,15 +20,21 @@ categories:
 
 ```bash
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io
-systemctl enable docker
-systemctl start docker
+curl -fsSL https://get.docker.com | bash -s docker
 ```
 
 `openssl`
 
 ```bash
 apt-get install libssl-dev
+```
+
+`mysql`
+
+```bash
+docker run --name mysql -v /opt/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=数据库密码 -d mysql
+docker exec -it mysql mysql -uroot -p
+create database kami
 ```
 
 # <h2 id="faka">二.安装发卡平台</h2>
