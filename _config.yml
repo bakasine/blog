@@ -14,7 +14,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://hentai121.github.io/
+url: https://bakahentailolicon.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -105,5 +105,5 @@ theme: gal-theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:hentai121/hentai121.github.io.git
+  repo: git@github.com:bakahentailolicon/bakahentailolicon.github.io.git
   branch: master
