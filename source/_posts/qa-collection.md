@@ -7,11 +7,11 @@ categories:
     - qa
 ---
 
-* [__SSH相关问题__](#ssh)
-** [SSH如何保持连接不自动断开](#ssh_keepalive)
-*[__Linux 遇到的问题__](#linux)
-** [Sed -e expression #1, char 14: unknown option to `s'](#sed_err1)
-*[__Mac M1 遇到的问题__](#mac)
+[__SSH相关问题__](#ssh)
+-[SSH如何保持连接不自动断开](#ssh_keepalive)
+[__Linux 遇到的问题__](#linux)
+-[Sed -e expression #1, char 14: unknown option to `s'](#sed_err1)
+[__Mac M1 遇到的问题__](#mac)
 
 # <h2 id="ssh">SSH相关问题</h2>
 

@@ -2,6 +2,8 @@
 
 ```
 1.下载 nodejs 安装
+https://nodejs.org/en
+// 指定版本16.10版本可以用这个链接
 https://nodejs.org/download/release/v16.10.0/node-v16.10.0-win-x64.zip
 
 2.安装git
@@ -11,12 +13,28 @@ https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2
 # Usage
 
 ``` bash
-git clone git@github.com:hentai121/blog.git ./blog
+git clone git@github.com:bakahentailolicon/blog.git ./blog
 
-git clone git@github.com:hentai121/gal-theme.git ./blog/themes/gal-theme
+git clone git@github.com:bakahentailolicon/gal-theme.git ./blog/themes/gal-theme
 
 cd blog
 
+npm install -g mirror-config-china --registry=https://registry.npmmirror.com
+
+npm i
+
+npm install --save hexo-renderer-sass-next
+
+npm un hexo-renderer-marked --save
+npm i hexo-renderer-markdown-it --save
+
+```
+
+# Hexo
+
+[简单使用教程](https://bakahentailolicon.github.io/2018/05/26/hello-world/)
+
+``` bash
 // 编写文章, 所有文章都在 blog\source\_posts 下
 hexo new 文件名
 
@@ -26,12 +44,11 @@ hexo g
 // 本地运行 访问 localhost:4000 浏览博客效果
 hexo s
 
-// 推送到 github 如果你配置了 git page 具体教程 https://hentai121.github.io/2018/05/26/hello-world/
+// 推送到 github 如果你配置了 git page 
+hexo d
+````
 
-```
-
-
-# gal-theme问题
+# gal-theme可能存在的问题
 
 1. 新本版node的npm版本太高，sass不能支持，最高只能使用版本7的npm。可以下载v16.10的node。
 

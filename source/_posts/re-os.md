@@ -11,7 +11,7 @@ categories:
 
 > 注意
 
-1. 全自动安装默认root密码:MoeClub.org,安装完成后请立即更改密码
+1. 全自动安装默认root密码: MoeClub.org,安装完成后请立即更改密码
 2. 请使用 passwd root 命令更改密码
 3. OpenVZ构架不适用
 
@@ -37,26 +37,15 @@ yum update
 
 > 自用debian9
 ``` bash
-wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/hentai121/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
+wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakahentailolicon/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
 
-bash DebianNET.sh -d stretch -v amd64 -a
+bash DebianNET.sh -d 11 -v 64 -p 密码 -a
 ```
 
 > 一键下载
 
 ``` bash
-wget --no-check-certificate -qO DebianNET.sh 'https://moeclub.org/attachment/LinuxShell/DebianNET.sh' && chmod a+x DebianNET.sh
-```
-
-``` bash
-Usage:
-        bash DebianNET.sh       -d/--debian [dist-name]
-                                -u/--ubuntu [dist-name]
-                                -v/--ver [32/i386|64/amd64]
-                                --ip-addr/--ip-gate/--ip-mask
-                                -apt/--mirror
-                                -dd/--image
-                                -a/-m
+wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakahentailolicon/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
 ```
 
 > 全自动/非自动示例
@@ -135,4 +124,4 @@ bash DebianNET.sh -u bionic -v 64
 
 > 转载自
 
-# [萌咖](https://moeclub.org/2017/03/25/82/?v=656)
+# [萌咖](https://github.com/MoeClub/Note)
