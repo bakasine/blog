@@ -8,14 +8,14 @@ categories:
 ---
 
 [__SSH相关问题__](#ssh)
--[SSH如何保持连接不自动断开](#ssh_keepalive)
+[-1.SSH如何保持连接不自动断开](#ssh_keepalive)
 [__Linux 遇到的问题__](#linux)
--[Sed -e expression #1, char 14: unknown option to `s'](#sed_err1)
+[-1.Sed -e expression #1, char 14: unknown option to `s'](#sed_err1)
 [__Mac M1 遇到的问题__](#mac)
 
 # <h2 id="ssh">SSH相关问题</h2>
 
-# <h3 id="ssh_keepalive">SSH如何保持连接不自动断开</h3>
+# <h3 id="ssh_keepalive">1.SSH如何保持连接不自动断开</h3>
 
 ```bash
 cat > ~/.ssh/config << EOF
@@ -26,7 +26,7 @@ EOF
 
 # <h2 id="linux">Linux 遇到的问题</h2>
 
-# <h3 id="sed_err1">Sed -e expression #1, char 14: unknown option to 's'</h3>
+# <h3 id="sed_err1">1.unknown option to 's'</h3>
 
 __sed使用变量替换,且变量含有'/'时__
 ```bash
