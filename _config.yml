@@ -105,5 +105,5 @@ theme: gal-theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:hentaisine/hentaisine.github.io.git
+  repo: git@github.com:bakasine/bakasine.github.io.git
   branch: master
