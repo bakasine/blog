@@ -16,6 +16,14 @@ __所以写出来跟大家分享一下__
   
 ## 下载方式
 
+### B站数据库下载
+
+__{% post_link search-danmuku B站数据库 %}__
+
+__缺点:__ 操作麻烦,需要搜索cid后下载然后转换
+
+__来源:__ 全!
+
 ### OneDrive网盘下载
 
 [__弹幕下载链接__](https://1drv.ms/f/s!AhuigvBDUdclcjDAVD6xf3b88sg?e=Ki88he)
