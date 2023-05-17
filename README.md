@@ -4,7 +4,7 @@
 1.下载 nodejs 安装
 https://nodejs.org/en
 // 指定版本16.10版本可以用这个链接
-https://nodejs.org/download/release/v16.10.0/node-v16.10.0-win-x64.zip
+// https://nodejs.org/download/release/v16.10.0/node-v16.10.0-win-x64.zip
 
 2.安装git
 https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2.39.2-64-bit.exe
@@ -13,9 +13,9 @@ https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2
 # Usage
 
 ``` bash
-git clone git@github.com:bakahentailolicon/blog.git ./blog
+git clone git@github.com:bakasine/blog.git ./blog
 
-git clone git@github.com:bakahentailolicon/gal-theme.git ./blog/themes/gal-theme
+git clone git@github.com:bakasine/gal-theme.git ./blog/themes/gal-theme
 
 cd blog
 
@@ -32,7 +32,7 @@ npm i hexo-renderer-markdown-it --save
 
 # Hexo
 
-[简单使用教程](https://bakahentailolicon.github.io/2018/05/26/hello-world/)
+[简单使用教程](https://bakasine.github.io/2018/05/26/hello-world/)
 
 ``` bash
 // 编写文章, 所有文章都在 blog\source\_posts 下
