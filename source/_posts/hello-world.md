@@ -5,7 +5,7 @@ tags:
   - hexo
   - github
 categories: 
-    - others
+  - others
 ---
 
 ## 事先准备
