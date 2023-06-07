@@ -9,8 +9,8 @@ categories:
 
 [注册](#register)
 [创建实例](#instance)
-[~~重装系统~~优化系统](#reos)
-[后记](#postscript)
+[优化系统](#opt)
+[dd系统](#dd)
 
 # <h2 id="register">注册</h2>
 
@@ -20,7 +20,8 @@ categories:
 # <h2 id="instance">创建实例</h2>
 
 `Launch resources` --> `Create a VM instance` --> `Image and shape` --> `Add SSH keys` --> `Boot volume` --> `Specify a...` 
-# <h2 id="reos">优化系统</h2>
+
+# <h2 id="opt">优化系统</h2>
 
 _dd系统后出现失联的情况, 推荐使用原生系统关闭防火墙使用__
 
@@ -79,13 +80,13 @@ sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/s
 sudo service sshd restart
 ```
 
----
+# <h2 id="dd">dd系统</h2>
 
 ``` bash
-# debian 10  (-firmware 额外驱动支持, 默认密码MoeClub.org)
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -p 'password' -d 10.3 -v 64 -a -firmware
+# debian 11  (-firmware 额外驱动支持, 默认密码MoeClub.org)
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/bakasine/Scripts/main/DebianNET.sh') -d 11 -v 64 -port "2222" -p "密码" 
 
-# ubuntu 20.04
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -p 'password' -u 20.04 -v 64 -a -firmware
+# ubuntu 22.04
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/bakasine/Scripts/main/DebianNET.sh') -u 22.04 -v 64 -port "2222" -p 'password' 
 ```
 
