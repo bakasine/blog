@@ -2,10 +2,11 @@
 title: 发行自己的加密货币并上架去中心交易所
 date: 2023-06-05 19:58:19
 tags:
-  - note
-  - crypto
+    - note
+    - crypto
+    - contract
 categories: 
-  - others
+    - others
 ---
 
 ## 前  言 
