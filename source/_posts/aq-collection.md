@@ -11,7 +11,7 @@ categories:
 [-- 1.SSH如何保持连接不自动断开](#ssh_keepalive)
 
 [__二. Linux 相关问题__](#linux)
-[-- 1.Sed -e expression #1, char 14: unknown option to `s'](#sed_err1)
+[-- 1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
 
 [__三. Mac M1 相关问题__](#mac)
 
