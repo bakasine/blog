@@ -17,6 +17,7 @@ categories:
 
 [__四. Git 相关问题__](#git)
 [-- 1.删除Git仓库中的大文件](#git_rm_large_file)
+[-- 2.加速Git Clone](#clone_speedup)
 
 # <h2 id="ssh">SSH 相关问题</h2>
 
@@ -50,7 +51,6 @@ __{% post_link mac-issue Mac M1 遇到的问题 %}__
 
 # <h3 id="git_rm_large_file">1.删除Git仓库中的大文件</h3>
 
-
 ```bash
 # 找出大文件
 git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk '{print$1}')"
@@ -65,4 +65,34 @@ git push origin master --force
 rm -rf .git/refs/original/
 git reflog expire --expire=now --all
 git gc --prune=now
+```
+
+# <h3 id="clone_speedup">2.加速Git Clone</h3>
+
+```bash
+# 设置 Http Proxy
+git config --global http.proxy socks5://127.0.0.1:7890
+
+# 设置 SSH Proxy
+
+vim ~/.ssh/config
+
+# 1.Linux & macOS
+cat ~/.ssh/config
+
+Host github.com
+ Hostname ssh.github.com
+ IdentityFile /xxx/.ssh/github_id_rsa
+ User git
+ Port 443
+ ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+ 
+# 2.Windows
+
+Host github.com
+ Hostname ssh.github.com
+ IdentityFile /c/users/xxx/.ssh/github_id_rsa
+ User git
+ Port 443
+ ProxyCommand connect -S 127.0.0.1:7890 %h %p
 ```
