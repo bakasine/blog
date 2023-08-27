@@ -7,17 +7,17 @@ categories:
     - qa
 ---
 
-[__一. SSH 相关问题__](#ssh)
-[-- 1.SSH如何保持连接不自动断开](#ssh_keepalive)
+- [__一. SSH 相关问题__](#ssh)
+  + [1.SSH如何保持连接不自动断开](#ssh_keepalive)
 
-[__二. Linux 相关问题__](#linux)
-[-- 1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
+- [__二. Linux 相关问题__](#linux)
+  + [1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
 
-[__三. Mac M1 相关问题__](#mac)
+- [__三. Mac M1 相关问题__](#mac)
 
-[__四. Git 相关问题__](#git)
-[-- 1.删除Git仓库中的大文件](#git_rm_large_file)
-[-- 2.加速Git Clone](#clone_speedup)
+- [__四. Git 相关问题__](#git)
+  + [1.删除Git仓库中的大文件](#git_rm_large_file)
+  + [2.加速Git Clone](#clone_speedup)
 
 # <h2 id="ssh">SSH 相关问题</h2>
 
