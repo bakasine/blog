@@ -8,8 +8,18 @@ categories:
     - mac
 ---
 
+* [Oh-My-Zsh问题](#omz)
 * [MySQL问题](#mysql)
 * [Docker问题](#docker)
+
+### <h2 id="omz">Oh-My-Zsh问题</h2>
+
+* 终端启动速度慢
+
+```
+# 注释掉.zshrc的这段写入, zprofile越来越大会导致写入速度巨慢
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
 
 ### <h2 id="mysql">MySQL</h2>
 
