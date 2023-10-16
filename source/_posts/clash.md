@@ -304,7 +304,6 @@ rules:
   # CUSTOM
   - RULE-SET,my-direct,DIRECT
   - RULE-SET,bilibili,Bilibili
-  - RULE-SET,Optimization,Opt
   # PROXY
   - RULE-SET,my-proxy,PROXY
   - RULE-SET,icloud,PROXY
