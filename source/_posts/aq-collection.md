@@ -18,6 +18,8 @@ categories:
 - [__四. Git 相关问题__](#git)
   + [1.删除Git仓库中的大文件](#git_rm_large_file)
   + [2.加速Git Clone](#clone_speedup)
+  
+- [__五. 面试相关问题__](#interview)
 
 # <h2 id="mac">Mac M1 相关问题</h2>
 
@@ -96,3 +98,7 @@ Host github.com
  Port 443
  ProxyCommand connect -S 127.0.0.1:7890 %h %p
 ```
+
+# <h2 id="interview">面试相关问题</h2>
+
+__{% post_link interview 面试相关问题 %}__
