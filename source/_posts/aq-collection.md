@@ -8,6 +8,7 @@ categories:
 ---
 
 - [__一. Mac M1 相关问题__](#mac)
+  + __{% post_link mac-issue Mac M1 遇到的问题 %}__
 
 - [__二. SSH 相关问题__](#ssh)
   + [1.SSH如何保持连接不自动断开](#ssh_keepalive)
@@ -20,10 +21,11 @@ categories:
   + [2.加速Git Clone](#clone_speedup)
   
 - [__五. 面试相关问题__](#interview)
+  + __{% post_link mac-issue Mac M1 遇到的问题 %}__
 
 # <h2 id="mac">Mac M1 相关问题</h2>
 
-__{% post_link mac-issue Mac M1 遇到的问题 %}__
+
 
 # <h2 id="ssh">SSH 相关问题</h2>
 
