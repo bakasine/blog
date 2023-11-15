@@ -7,9 +7,12 @@ categories:
     - note
 ---
 
+
 * [Go](#golang)
+* [Gin](#gin)
 * [Redis](#redis)
 * [Mysql](#mysql)
+* [网络](#network)
 
 # <h2 id="golang">Go</h2>
 
@@ -90,6 +93,21 @@ func test() (i int) { //有名返回i
 扩容: 元素个数大于bmap*6.5 或者 溢出桶的数量过多
 ```
 
+# <h3 id="syncmap">Sync Map</h3>
+
+```
+主要是空间换时间的概念,通过read和dirty两个map来实现
+read读操作不加锁,读取不到数据后会对read加锁再读一次,然后再去dirty读取
+1.当read miss次数过多会将原本read删除然后dirty提升为read
+2.使用内置range函数当read和dirty不一致时也会触发dirty提升机制
+3.删除元素read有直接删除,没有则去dirty执行删除
+4.新增修改
+  - 在read中查找key，找到了则通过原子操作，尝试更新value
+  - key在read中存在，但是被标记为已删除，则kv加入dirty中，并更新value值
+  - key在read中不存在，但在dirty中存在，则直接在dirty中更新value   
+  - key在read和dirty中都不存在，则直接在dirty中加入kv
+```
+
 # <h3 id="channel">Channel</h3>
 
 ```
@@ -120,6 +138,16 @@ func test() (i int) { //有名返回i
 4.重复上一步骤，直到灰色对象队列为空
 5.此时剩下的所有白色对象都是垃圾对象
 ```
+
+# <h2 id="gin">Gin</h2>
+
+# <h3 id="router">动态路由</h3>
+
+`通过字典树实现`
+
+# <h3 id="router">中间件原理</h3>
+
+`http请求来到时先经过中间件,主要由一个函数切片通过index下标访问`
 
 # <h2 id="redis">Redis</h2>
 
@@ -290,7 +318,13 @@ B+树:
     导致第二次查询结果为6条数据
 ```
 
+# <h2 id="network">网络</h2>
 
+# <h3 id="http">http,https和http2.0</h3>
+
+`http1.1`: 新增tcp长连接, 增加缓存处理, 断点续传
+`http2.0`: header压缩, 多个request共用一个连接(多路复用), 二进制格式传输, 服务器推送
+`https`: ca证书加密,端口修改,
 
 
 
