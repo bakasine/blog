@@ -9,6 +9,14 @@ categories:
         - linux
 ---
 
+> 更新于 2023-11-26 22:12:21
+
+```
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "password" -port "2222"
+```
+
+---
+
 > 注意
 
 1. 全自动安装默认root密码: MoeClub.org,安装完成后请立即更改密码
@@ -37,7 +45,7 @@ yum update
 
 > 自用debian9
 ``` bash
-wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakahentailolicon/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
+wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakasine/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
 
 bash DebianNET.sh -d 11 -v 64 -p 密码 -a
 ```
@@ -45,7 +53,7 @@ bash DebianNET.sh -d 11 -v 64 -p 密码 -a
 > 一键下载
 
 ``` bash
-wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakahentailolicon/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
+wget --no-check-certificate -qO DebianNET.sh 'https://raw.githubusercontent.com/bakasine/Scripts/main/DebianNET.sh' && chmod a+x DebianNET.sh
 ```
 
 > 全自动/非自动示例
