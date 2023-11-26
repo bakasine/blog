@@ -9,6 +9,7 @@ categories:
 
 [注册](#register)
 [创建实例](#instance)
+[申请Ipv6](#ipv6)
 [优化系统](#opt)
 [dd系统](#dd)
 
@@ -16,10 +17,22 @@ categories:
 
 # [oracle](https://www.oracle.com/cloud/sign-in.html)
 
-
 # <h2 id="instance">创建实例</h2>
 
 `Launch resources` --> `Create a VM instance` --> `Image and shape` --> `Add SSH keys` --> `Boot volume` --> `Specify a...` 
+
+# <h2 id="ipv6">Ipv6</h2>
+
+`虚拟云网络` -> `点击vcn` -> `CIDR Blocks/Prefixes` -> `Add CIDR Block/IPv6 Prefix` -> __勾选__ `Assign an Oracle allocated IPv6 /56 prefix`
+
+`子网` -> `编辑` -> __勾选__ `Assign an Oracle allocated IPv6 /64 prefix` -> __输入__ `00-FF之间`
+
+`路由表` -> `添加路由规则` -> `选择IPv6`
+
+`安全列表` -> `入站规则` -> `添加入站/出站规则` -> `CIDR | ::/0 | 所有协议`
+
+`附加的VNIC` -> `“IPv6地址` -> `分配IPv6地址` -> `自动或者手动(:ABF)`
+
 
 # <h2 id="opt">优化系统</h2>
 
