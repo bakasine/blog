@@ -25,7 +25,7 @@ categories:
   + __{% post_link interview 面试相关 %}__
 
 
-# <h2 id="ssh" style="color:azure">SSH 相关问题</h2>
+# <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
 # <h3 id="ssh_keepalive">1.SSH 如何保持连接不自动断开</h3>
 
@@ -61,7 +61,7 @@ Host target
  ProxyCommand ssh jump -W %h:%p
 ```
 
-# <h2 id="linux" style="color:azure">Linux 相关问题</h2>
+# <h2 id="linux" style="color:#FF8C00">Linux 相关问题</h2>
 
 # <h3 id="sed_err1">1.unknown option to 's'</h3>
 
@@ -74,7 +74,7 @@ sed -i "s/regex/$var/" file
 sed -i "s~regex~$var~" file
 ```
 
-# <h2 id="git" style="color:azure">Git 相关问题</h2>
+# <h2 id="git" style="color:#FF8C00">Git 相关问题</h2>
 
 # <h3 id="git_rm_large_file">1.删除Git仓库中的大文件</h3>
 
