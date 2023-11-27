@@ -70,6 +70,7 @@ make -j$(nproc)
 
 `编写systemd文件`
 
+```
 cat > /etc/systemd/system/xmrig.service << EOF
 [Unit]
 Description=miner service
@@ -82,6 +83,7 @@ CPUWeight=1
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 `开机自启`
 
