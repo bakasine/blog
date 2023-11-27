@@ -6,7 +6,7 @@ date: 2023-10-30 14:18:32
 
 **[二次元](#anime)**
 **[└─视频](#anime_video)**
-**[└─工具](#anime_tool)**
+**[└─搜图工具](#anime_tool)**
 **[论坛](#bbs)**
 **[工具](#tool)**
 **[游戏](#game)**
@@ -19,7 +19,7 @@ date: 2023-10-30 14:18:32
 
 | **[girigirilove](https://anime.girigirilove.com)** | **[nyafun](https://www.nyafun.net/)** | **[bilibili](https://www.bilibili.com)** |
 
-# <h3 id="anime_tool">二次元 - 工具</h3>
+# <h3 id="anime_tool">二次元 - 搜图工具</h3>
 
 | **[saucenao](https://saucenao.com/)** | 
 

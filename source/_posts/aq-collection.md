@@ -1,5 +1,5 @@
 ---
-title: 开发遇见的问题合集
+title: 合订本
 date: 2099-1-1 11:11:11
 tags:
     - qa
@@ -12,6 +12,7 @@ categories:
 
 - [__二. SSH 相关问题__](#ssh)
   + [1.SSH如何保持连接不自动断开](#ssh_keepalive)
+  + [2.SSH使用跳板机](#ssh_jump)
 
 - [__三. Linux 相关问题__](#linux)
   + [1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
@@ -21,24 +22,46 @@ categories:
   + [2.加速Git Clone](#clone_speedup)
   
 - [__五. 面试相关问题__](#interview)
-  + __{% post_link mac-issue Mac M1 遇到的问题 %}__
-
-# <h2 id="mac">Mac M1 相关问题</h2>
+  + __{% post_link interview 面试相关 %}__
 
 
-
-# <h2 id="ssh">SSH 相关问题</h2>
+# <h2 id="ssh" style="color:azure">SSH 相关问题</h2>
 
 # <h3 id="ssh_keepalive">1.SSH 如何保持连接不自动断开</h3>
 
 ```bash
-cat > ~/.ssh/config << EOF
+cat >> ~/.ssh/config << EOF
+
 Host *
     ServerAliveInterval 60
 EOF
 ```
 
-# <h2 id="linux">Linux 相关问题</h2>
+# <h3 id="ssh_jump">2.SSH 使用跳板机</h3>
+
+`1.ProxyJump`
+
+```
+Host target
+ Hostname 
+ IdentityFile 
+ User 
+ Port 
+ ProxyJump jump
+```
+
+`2.ProxyCommand`
+
+```
+Host target
+ Hostname 
+ IdentityFile 
+ User 
+ Port 
+ ProxyCommand ssh jump -W %h:%p
+```
+
+# <h2 id="linux" style="color:azure">Linux 相关问题</h2>
 
 # <h3 id="sed_err1">1.unknown option to 's'</h3>
 
@@ -51,7 +74,7 @@ sed -i "s/regex/$var/" file
 sed -i "s~regex~$var~" file
 ```
 
-# <h2 id="git">Git 相关问题</h2>
+# <h2 id="git" style="color:azure">Git 相关问题</h2>
 
 # <h3 id="git_rm_large_file">1.删除Git仓库中的大文件</h3>
 
@@ -100,7 +123,3 @@ Host github.com
  Port 443
  ProxyCommand connect -S 127.0.0.1:7890 %h %p
 ```
-
-# <h2 id="interview">面试相关问题</h2>
-
-__{% post_link interview 面试相关问题 %}__
