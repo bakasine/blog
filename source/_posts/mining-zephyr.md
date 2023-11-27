@@ -13,6 +13,7 @@ categories:
 * [配置文件](#config)
 * [查看数据](#data)
 * [优化](#optimization)
+* [问题集](#qa)
 
 # <h2 id="tools">工具下载</h2>
 
@@ -109,17 +110,25 @@ journalctl -fu xmrig
 systemctl disable xmrig
 ```
 
-
-# <h2 id="data">查看数据</h2>
+# <h2 id="data" style="color:#FF8C00">查看数据</h2>
 
 `统计数据和付款历史`
 
 **[挖矿数据](https://zephyr.miningocean.org/worker_stats)**
 
-# <h2 id="optimization">优化</h2>
+# <h2 id="optimization" style="color:#FF8C00">优化</h2>
 
 `启用hugepages，算力提升20-30%，会占用2.5GB内存`
 
 ```
 bash -c "echo vm.nr_hugepages=1280 >> /etc/sysctl.conf"
+```
+
+# <h2 id="qa" style="color:#FF8C00">问题集</h2>
+
+# <h3 id="v6only">服务器只有ipv6</h3>
+
+```
+cp /etc/resolv.conf /etc/resolv.conf.bak
+echo -e "nameserver 2a01:4f8:c2c:123f::1\nnameserver 2a00:1098:2c::1\nnameserver 2a01:4f9:c010:3f02::1" > /etc/resolv.conf
 ```
