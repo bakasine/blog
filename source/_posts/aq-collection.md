@@ -20,6 +20,7 @@ categories:
 - [__四. Git 相关问题__](#git)
   + [1.删除Git仓库中的大文件](#git_rm_large_file)
   + [2.加速Git Clone](#clone_speedup)
+  + [3.Git Bash乱码问题](#git_bash_code)
   
 - [__五. 面试相关问题__](#interview)
   + __{% post_link interview 面试相关 %}__
@@ -122,4 +123,13 @@ Host github.com
  User git
  Port 443
  ProxyCommand connect -S 127.0.0.1:7890 %h %p
+```
+
+# <h3 id="git_bash_code">3.Git Bash乱码问题</h3>
+
+```
+cat >> /etc/bash.bashrc << EOF
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+EOF
 ```
