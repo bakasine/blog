@@ -25,6 +25,9 @@ categories:
 - [__五. 面试相关问题__](#interview)
   + __{% post_link interview 面试相关 %}__
 
+- [__六. VPS相关__](#vps)
+  + [1.纯 IPv6 怎么访问 IPv4](#vps_ipv6_only)
+
 
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
@@ -132,4 +135,12 @@ cat >> /etc/bash.bashrc << EOF
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 EOF
+```
+
+# <h2 id="vps" style="color:#FF8C00">VPS 相关问题</h2>
+
+# <h3 id="vps_ipv6_only">1.纯 IPv6 怎么访问 IPv4</h3>
+
+```
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh 4
 ```
