@@ -40,14 +40,14 @@ apt-get install git build-essential cmake automake libtool autoconf -y
 git clone https://github.com/xmrig/xmrig.git
 ```
 	
-__2.去掉1%抽水,编辑 src/donate.h，将以下的数值改成0__
+__2.去掉1%抽水,编辑 `src/donate.h`，将以下的数值改成0__
 
 ```
 kMinimumDonateLevel=0
 kDefaultDonateLevel=0
 ```
  
-__3.编辑 src/net/strategies/DonateStrategy.cpp__
+__3.编辑 `src/net/strategies/DonateStrategy.cpp`__
 
 ```
 将里面的
