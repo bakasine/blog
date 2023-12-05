@@ -42,7 +42,12 @@ kDefaultDonateLevel=0
  
 __3.编辑 src/net/strategies/DonateStrategy.cpp__
 
-**将里面的kDonateHost和kDonateHostTls改成自己的代理地址，如果没有修改，可以改成127.0.0.1。**
+```
+将里面的
+kDonateHost
+kDonateHostTls
+改成自己的代理地址，如果没有修改，可以改成127.0.0.1
+```
 
 __4.编译__
 
@@ -56,7 +61,7 @@ make -j$(nproc)
 # <h2 id="miningpools">矿池</h2>
 
 **[miningpools](https://miningpoolstats.stream/zephyr)**
-
+**[miningocean](https://zephyr.miningocean.org/getting_started)**
 
 # <h2 id="config">配置文件</h2>
 
