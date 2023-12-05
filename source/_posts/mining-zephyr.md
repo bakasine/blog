@@ -8,12 +8,19 @@ categories:
     - mining
 ---
 
+* [脚本安装](#script)
 * [工具下载](#tools)
 * [矿池](#miningpools)
 * [配置文件](#config)
 * [查看数据](#data)
 * [优化](#optimization)
 * [问题集](#qa)
+
+# <h2 id="script">脚本安装</h2>
+
+```
+bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/mining.sh)" @
+```
 
 # <h2 id="tools">工具下载</h2>
 

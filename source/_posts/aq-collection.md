@@ -27,6 +27,7 @@ categories:
 
 - [__六. VPS相关__](#vps)
   + [1.纯 IPv6 怎么访问 IPv4](#vps_ipv6_only)
+  + [1.双栈网络设置 IPv4 优先](#vps_ipv4_first)
 
 
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
@@ -144,3 +145,18 @@ EOF
 ```
 wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh 4
 ```
+
+# <h3 id="vps_ipv4_first">2.双栈网络设置 IPv4 优先</h3>
+
+`debian`
+
+```
+sed -i 's/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/' /etc/gai.conf
+```
+
+__撤回ipv6优先__
+
+```
+sed -i 's/precedence ::ffff:0:0\/96  100/#precedence ::ffff:0:0\/96  100/' /etc/gai.conf
+```
+
