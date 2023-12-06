@@ -2,12 +2,13 @@
 title: oracle免费云服务
 date: 2022-09-03 09:46:35
 tags:
-	- vps
+	- oracle
 categories: 
     - vps
 ---
 
 [注册](#register)
+[修改ssh端口密码脚本](#onekey)
 [创建实例](#instance)
 [申请Ipv6](#ipv6)
 [优化系统](#opt)
@@ -16,6 +17,12 @@ categories:
 # <h2 id="register">注册</h2>
 
 # [oracle](https://www.oracle.com/cloud/sign-in.html)
+
+# <h2 id="onekey">修改ssh端口密码脚本</h2>
+
+```
+bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/ssh.sh)" @
+```
 
 # <h2 id="instance">创建实例</h2>
 
@@ -35,6 +42,12 @@ categories:
 
 
 # <h2 id="opt">优化系统</h2>
+
+`一键脚本`
+
+```
+bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/ssh.sh)" @
+```
 
 _dd系统后出现失联的情况, 推荐使用原生系统关闭防火墙使用__
 
