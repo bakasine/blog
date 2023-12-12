@@ -18,7 +18,7 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeCl
 `国内机器`
 
 ```
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "password" -port "2222" --mirror 'https://mirrors.cloud.tencent.com/debian/'
+bash <(wget --no-check-certificate -qO- 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "password" -port "2222" --mirror 'https://mirrors.cloud.tencent.com/debian/'
 ```
 
 ---
