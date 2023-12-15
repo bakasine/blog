@@ -16,7 +16,6 @@ date: 2023-10-30 14:18:32
 **[接码平台](#sms)**
 **[挖矿](#mining)**
 
-
 # <h2 id="anime" style="color:#FF8C00">二次元</h2>
 
 # <h3 id="anime_video">二次元 - 视频</h3>
@@ -55,4 +54,4 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="mining" style="color:#FF8C00">挖矿</h2>
 
-| **[矿池统计](https://miningpoolstats.stream/)** | **[miningocean矿池](https://miningocean.org/)** |
+| **[矿池统计](https://miningpoolstats.stream/)** |
