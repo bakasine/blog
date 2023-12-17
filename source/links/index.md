@@ -13,6 +13,7 @@ date: 2023-10-30 14:18:32
 **[破解软件](#crack)**
 **[DNS](#dns)**
 **[域名](#domain)**
+**[邮箱](#email)**
 **[接码平台](#sms)**
 **[挖矿](#mining)**
 
@@ -28,7 +29,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="bbs" style="color:#FF8C00">论坛</h2>
 
-| **[v2ex](https://www.v2ex.com)** | **[hostloc](https://hostloc.com/forum-45-1.html)** | **[nodeseek](https://www.nodeseek.com/)** | 
+| **[v2ex](https://www.v2ex.com)** | **[hostloc](https://hostloc.com/forum-45-1.html)** | **[nodeseek](https://www.nodeseek.com/)** | **[bitcointalk](https://bitcointalk.org/index.php?board=159.0;sort=last_post;desc)** | **[bitcointalk](https://lowendtalk.com/)** |
 
 # <h2 id="tool" style="color:#FF8C00">工具</h2>
 
@@ -48,10 +49,14 @@ date: 2023-10-30 14:18:32
 
 | **[价格排行](https://tld-list.com/)** | **[free.hr](https://subreg.cz/en/)** | **[eu.org](https://nic.eu.org/)** | 
 
+# <h2 id="domain" style="color:#FF8C00">域名</h2>
+
+| **[輔英科技大學](https://aspstd.fy.edu.tw/StdNew/)** | **[湖北工业大学](https://xmail.hbut.edu.cn/)** |
+
 # <h2 id="sms" style="color:#FF8C00">接码平台</h2>
 
 | **[sms-activate](https://sms-activate.org/cn)** | 
 
 # <h2 id="mining" style="color:#FF8C00">挖矿</h2>
 
-| **[矿池统计](https://miningpoolstats.stream/)** |
+| **[矿池统计](https://miningpoolstats.stream/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[算力租赁](https://www.miningrigrentals.com/)** |
