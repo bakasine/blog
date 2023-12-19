@@ -13,6 +13,7 @@ categories:
 [申请Ipv6](#ipv6)
 [优化系统](#opt)
 [dd系统](#dd)
+[原邮箱找回](#getback)
 
 # <h2 id="register">注册</h2>
 
@@ -38,7 +39,7 @@ bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/ssh.sh)" @
 
 `安全列表` -> `入站规则` -> `添加入站/出站规则` -> `CIDR | ::/0 | 所有协议`
 
-`附加的VNIC` -> `“IPv6地址` -> `分配IPv6地址` -> `自动或者手动(:ABF)`
+`附加的VNIC` -> `"IPv6地址` -> `分配IPv6地址` -> `自动或者手动(:ABF)`
 
 
 # <h2 id="opt">优化系统</h2>
@@ -116,3 +117,19 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/bakas
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/bakasine/Scripts/main/DebianNET.sh') -u 22.04 -v 64 -port "2222" -p 'password' 
 ```
 
+# <h2 id="getback">原邮箱找回</h2>
+
+1.使用原注册邮箱去[support](https://support.oracle.com/)注册并登陆
+2.然后创建技术支持工单，会有个选项，选择你的产品，你会发现有个支持id，绑定的是你的oraclecloud计划，详细内容是"我原来的用户因为邮箱损坏，无法继续登陆，麻烦将邮箱重置为xxxx@xxx.xxxx"
+3.不出24小时他会告诉你完成，请用新油箱登陆，你去找回密码即可
+
+```
+右上角"contact us",然后 点击"Create Non-Technical SR"，
+problem type 选择"login/administration/profile issues—login/Assess issue"
+Problem Summary里面就写"my oracle account has been stolen"
+点击下一步，描述里面就英文写一下"my oracle account has been stolen，please change my administrator email address to XXX@XXX.com"注意这里要一个新邮箱，不能是原邮
+然后下一步是传附件之类的，可以传一下邮箱里面账户相关的截图。
+然后 提交
+我发了不到一个小时就回了，让我提供一个新的邮箱地址，因为我第一次不知道，没提供新的邮箱地址
+后来把新邮箱地址 发过去了 ，可能是下班了，目前暂未回消息
+```
