@@ -11,7 +11,7 @@ categories:
 ## 事先准备
 
 * Node.js
-* git
+* Git
 
 ## 创建 GitHub Pages
 这个百度都有
@@ -93,5 +93,4 @@ npm config set registry https://registry.npm.taobao.org
 npm config get registry // 查看是否配置成功
 npm config list  // 查看npm当前配置
 npm cache clear --force // 强制清除缓存
-
 ```
