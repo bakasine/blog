@@ -8,6 +8,7 @@ date: 2023-10-30 14:18:32
 **[└─视频](#anime_video)**
 **[└─搜图工具](#anime_tool)**
 **[论坛](#bbs)**
+**[AI模型](#aimodel)**
 **[工具](#tool)**
 **[游戏](#game)**
 **[破解软件](#crack)**
@@ -31,9 +32,13 @@ date: 2023-10-30 14:18:32
 
 | **[v2ex](https://www.v2ex.com)** | **[hostloc](https://hostloc.com/forum-45-1.html)** | **[nodeseek](https://www.nodeseek.com/)** | **[bitcointalk](https://bitcointalk.org/index.php?board=159.0;sort=last_post;desc)** | **[bitcointalk](https://lowendtalk.com/)** |
 
+# <h2 id="aimodel" style="color:#FF8C00">AI 模型</h2>
+
+| **[画图模型](https://civitai.com/)** |
+
 # <h2 id="tool" style="color:#FF8C00">工具</h2>
 
-| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** |
+| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** |
 
 # <h2 id="game" style="color:#FF8C00">游戏</h2>
 
