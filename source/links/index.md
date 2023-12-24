@@ -38,7 +38,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="tool" style="color:#FF8C00">工具</h2>
 
-| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** |
+| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** | **[FC2出处](https://db.msin.jp/?njp)** |
 
 # <h2 id="game" style="color:#FF8C00">游戏</h2>
 
