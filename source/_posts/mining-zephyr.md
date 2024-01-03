@@ -19,7 +19,7 @@ categories:
 # <h2 id="script">脚本安装</h2>
 
 ```
-bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/mining.sh)" @
+bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/zeph.sh)" @
 ```
 
 # <h2 id="tools">工具下载</h2>
