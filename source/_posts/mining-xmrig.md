@@ -1,9 +1,10 @@
 ---
-title: Zephyr 挖矿
+title: CPU 挖矿工具 XMRIG 编译安装
 date: 2023-11-27 14:49:36
 tags:
     - zephyr
     - note
+    - xmrig
 categories:
     - mining
 ---
@@ -19,7 +20,7 @@ categories:
 # <h2 id="script">脚本安装</h2>
 
 ```
-bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/zeph.sh)" @
+bash -c "$(curl -L https://cdn.jsdelivr.net/gh/uerax/script@master/xmrig.sh)" @
 ```
 
 # <h2 id="tools">工具下载</h2>
