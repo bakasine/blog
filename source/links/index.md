@@ -63,4 +63,4 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="mining" style="color:#FF8C00">挖矿</h2>
 
-| **[矿池统计](https://miningpoolstats.stream/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[算力租赁](https://www.miningrigrentals.com/)** |
+| **[矿池统计](https://miningpoolstats.stream/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[挖矿收益排行](https://poolbay.io/miners-profitability/cpu)** |
