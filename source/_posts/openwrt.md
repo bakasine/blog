@@ -12,7 +12,6 @@ categories:
 [降级(可选)](#down)
 [刷机](#flash)
 [旁路由](#side)
-[IPv6不可用问题](#ipv6)
 
 # <h2 id="pre">准备</h2>
 
