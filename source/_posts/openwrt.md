@@ -31,12 +31,21 @@ __同一个网络下的电脑运行降级脚本 run.bat 输入 N1 盒子的 IP__
 
 1. 电脑插上 U盘,打开 `balenaEtcher` 选择固件解压的 `img文件` 点击 Flash
 2. 拔下 N1 盒子的电源, 插上 U 盘后再接入电源
-3. 打开 adb.exe, 输入 `adb connect 盒子的IP`, 然后输入 `adb reboot update`
-4. 连接 N1 盒子发出的 Wi-Fi, 电脑访问 192.168.1.1 进入管理页面, 默认密码：password
-5. 点击左边的 `系统` -> `TTYD终端`, 用户名: `root`, 密码: `password`
-6. 执行命令 `cd /root && ./install-to-emmc.sh`
-7. 根据不同的机器输入对应的数字, N1 盒子为 `11`, 执行完最后输入 `1`
-8. 显示 `Successful···` 即安装成功, 拔掉 U盘 和 N1 电源线，重新插入启动即可
+3. 打开cmd 输入 `adb.exe connect 盒子的IP`, 然后输入 `adb.exe reboot update`
+
+Flippy版: 
+1. 连接 N1 盒子发出的 Wi-Fi, 电脑访问 192.168.1.1 进入管理页面, 默认密码：password
+2. 点击左边的 `系统` -> `TTYD终端`, 用户名: `root`, 密码: `password`
+3. 执行命令 `cd /root && ./install-to-emmc.sh`
+4. 根据不同的机器输入对应的数字, N1 盒子为 `11`, 执行完最后输入 `1`
+5. 显示 `Successful···` 即安装成功, 拔掉 U盘 和 N1 电源线，重新插入启动即可	
+
+官方版本: 
+1. 连接 N1 盒子发出的 Wi-Fi, 电脑访问 10.0.0.1 进入管理页面, 默认密码： root
+2. 点击左边的 `服务` -> `Terminal`, 用户名: `root`, 密码: `root`
+3. `系统` ->  `晶晨宝盒` -> `安装 OpenWrt` -> 选择型号 -> 安装
+4. 显示 `Successful···` 即安装成功, 拔掉 U盘 和 N1 电源线，重新插入启动即可	
+
 
 # <h2 id="side">旁路由</h2>
 
@@ -46,6 +55,7 @@ __同一个网络下的电脑运行降级脚本 run.bat 输入 N1 盒子的 IP__
 协议: 静态协议
 IPv4 地址: 主路由 IP 如果是 192.168.1.1, 就把最后位的 1 改成 255 以内的数
 IPv4 网关: 填主路由的 IP, 一般为 192.168.1.1, 可以用 ipconfig 命令查看
+设备: eth0
 使用自定义的 DNS 服务器: 和IPv4 网关一致
 
 `DHCP 服务器`
@@ -81,3 +91,6 @@ iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 点击添加后, 点击保存&应用
 
+__连接旁路由__
+
+正常连接主路由, DNS和路由器改为旁路由的IP, IP地址自设
