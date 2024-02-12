@@ -24,6 +24,9 @@ tail -f ~/.bitmonero/bitmonero.log
 
 # 要求守护进程退出
 ./monerod exit
+
+# 停止挖矿
+./monerod stop_mining
 ```
 
 
