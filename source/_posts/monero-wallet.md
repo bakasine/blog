@@ -27,6 +27,9 @@ tail -f ~/.bitmonero/bitmonero.log
 
 # 停止挖矿
 ./monerod stop_mining
+
+# 恢复钱包
+./mangonote-wallet-cli --restore-from-seed
 ```
 
 
