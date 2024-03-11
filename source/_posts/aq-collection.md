@@ -27,9 +27,12 @@ categories:
 - [__五. 面试相关问题__](#interview)
   + __{% post_link interview 面试相关 %}__
 
-- [__六. VPS相关__](#vps)
+- [__六. VPS 相关__](#vps)
   + [1.纯 IPv6 怎么访问 IPv4](#vps_ipv6_only)
   + [1.双栈网络设置 IPv4 优先](#vps_ipv4_first)
+
+- [__七. Vim 相关__](#vim)
+  + __{% post_link vim Vim 相关 %}__
 
 
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
