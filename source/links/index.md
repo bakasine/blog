@@ -29,7 +29,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="bbs" style="color:#FF8C00">论坛</h2>
 
-| **[v2ex](https://www.v2ex.com)** | **[hostloc](https://hostloc.com/forum-45-1.html)** | **[nodeseek](https://www.nodeseek.com/)** | **[bitcointalk](https://bitcointalk.org/index.php?board=159.0;sort=last_post;desc)** | **[bitcointalk](https://lowendtalk.com/)** |
+| **[v2ex](https://www.v2ex.com)** | **[hostloc](https://hostloc.com/forum-45-1.html)** | **[nodeseek](https://www.nodeseek.com/)** | **[bitcointalk](https://bitcointalk.org/index.php?board=159.0;sort=last_post;desc)** | **[lowendtalk](https://lowendtalk.com/)** |
 
 # <h2 id="aimodel" style="color:#FF8C00">AI 模型</h2>
 
