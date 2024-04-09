@@ -10,6 +10,10 @@ categories:
 ```
 viw // 选中单词
 
+CTRL + O  // 光标跳转到之前的位置
+
+v%d // 复制整个括号的内容，需要用p粘贴
+
 daw // 删除光标所在的单词
 di" // 删除双引号内的文本
 d% // 删除整个括号内容，光标必须指向括号
@@ -26,6 +30,8 @@ gg=G // 格式化
 
 :set nu // 显示行号
 :set nonu // 不显示行号
+
+"+y // 复制到粘贴板，必须 vim --version | grep clipboard 显示 +clipboard
 
 yy // 复制行
 dd // 剪切行
