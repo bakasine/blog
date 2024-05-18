@@ -21,6 +21,11 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeCl
 bash <(wget --no-check-certificate -qO- 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "password" -port "2222" --mirror 'https://mirrors.cloud.tencent.com/debian/'
 ```
 
+`OpenVZ/LXC 架构`
+
+```
+wget -qO OsMutation.sh https://raw.githubusercontent.com/LloydAsp/OsMutation/main/OsMutation.sh && chmod u+x OsMutation.sh && ./OsMutation.sh
+```
 ---
 
 > 注意

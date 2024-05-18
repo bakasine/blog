@@ -29,7 +29,8 @@ categories:
 
 - [__六. VPS 相关__](#vps)
   + [1.纯 IPv6 怎么访问 IPv4](#vps_ipv6_only)
-  + [1.双栈网络设置 IPv4 优先](#vps_ipv4_first)
+  + [2.双栈网络设置 IPv4 优先](#vps_ipv4_first)
+  + [3.DD系统](#dd)
 
 - [__七. Vim 相关__](#vim)
   + __{% post_link vim Vim 相关 %}__
@@ -183,4 +184,8 @@ __撤回ipv6优先__
 ```
 sed -i 's/precedence ::ffff:0:0\/96  100/#precedence ::ffff:0:0\/96  100/' /etc/gai.conf
 ```
+
+# <h3 id="dd">3. DD 系统</h3>
+
+__{% post_link re-os DD 系统 %}__
 
