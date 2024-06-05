@@ -189,3 +189,20 @@ sed -i 's/precedence ::ffff:0:0\/96  100/#precedence ::ffff:0:0\/96  100/' /etc/
 
 __{% post_link re-os DD 系统 %}__
 
+# <h2 id="screen">Screen 相关</h3>
+
+# <h3 id="screen_usage">基本用法</h3>
+
+```
+# 创建
+screen cmd
+
+# 保存退出
+ctrl+a d
+
+# ls
+screen -ls
+
+# 重新连接
+screen -r 编号
+```
