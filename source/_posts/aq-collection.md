@@ -35,6 +35,8 @@ categories:
 - [__七. Vim 相关__](#vim)
   + __{% post_link vim Vim 相关 %}__
 
+- [__八. Screen 相关__](#screen)
+  + [1.基本用法](#screen_usage)
 
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
