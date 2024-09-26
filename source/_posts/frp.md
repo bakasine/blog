@@ -64,6 +64,8 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 22
 remotePort = 2222
+transport.useEncryption = true
+transport.useCompression = true
 ```
 
 # <h2 id="usage">用法</h2>
