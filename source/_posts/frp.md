@@ -44,7 +44,8 @@ systemctl enable azi
 mkdir -p /usr/local/etc/azi/
 
 cat > /usr/local/etc/azi/config.toml <<EOF
-bindPort = 80
+bindPort = 8848
+bindAddr = "::"
 auth.token = "hentailolicon"
 EOF
 
@@ -55,13 +56,13 @@ rm -r /root/tmp
 
 ```toml
 serverAddr = "服务端的IP"
-serverPort = 80
+serverPort = 8848
 auth.token = "hentailolicon"
 
 [[proxies]]
 name = "ssh"
 type = "tcp"
-localIP = "127.0.0.1"
+localIP = "[::]"
 localPort = 22
 remotePort = 2222
 transport.useEncryption = true
