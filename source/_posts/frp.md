@@ -62,11 +62,27 @@ auth.token = "hentailolicon"
 [[proxies]]
 name = "ssh"
 type = "tcp"
-localIP = "[::]"
+localIP = "::"
 localPort = 22
 remotePort = 2222
 transport.useEncryption = true
 transport.useCompression = true
+```
+
+`Win11 安装 OpenSSH`
+
+```
+设置 -> 系统 -> 可选功能 -> 添加可选功能 -> 搜索 OpenSSH
+
+搜索 OpenSSH 客户端 OpenSSH 服务器 -> 下一步 -> 安装
+
+win+r -> services.msc -> OpenSSH SSH Server -> 启动
+```
+
+`开放端口`
+
+```
+win+r -> firewall.cpl -> 高级设置 -> 入站规则 -> 新建规则
 ```
 
 # <h2 id="usage">用法</h2>
