@@ -54,7 +54,7 @@ EOF
 
 `1.ProxyJump`
 
-```
+```bash
 Host target
  Hostname 
  IdentityFile 
@@ -65,7 +65,7 @@ Host target
 
 `2.ProxyCommand`
 
-```
+```bash
 Host target
  Hostname 
  IdentityFile 
@@ -91,7 +91,7 @@ sed -i "s~regex~$var~" file
 
 `ubuntu默认安装 needrestart 导致`
 
-```
+```bash
 apt purge needrestart -y
 ```
 
@@ -99,7 +99,7 @@ apt purge needrestart -y
 
 输入 `:set mouse-=a` 或者直接
 
-```
+```bash
 cat >> ~/.vimrc <<EOF
 :set mouse-=a
 syntax on
@@ -141,24 +141,26 @@ cat ~/.ssh/config
 
 Host github.com
  Hostname ssh.github.com
- IdentityFile 
+ IdentityFile ~/.ssh/id_rsa
  User git
  Port 443
- ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+ #ProxyJump HOST
+ #ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
  
 # 2.Windows
 
 Host github.com
  Hostname ssh.github.com
- IdentityFile 
+ IdentityFile ~/.ssh/id_rsa 
  User git
  Port 443
- ProxyCommand connect -S 127.0.0.1:7890 %h %p
+ #ProxyJump HOST
+ #ProxyCommand connect -S 127.0.0.1:7890 %h %p
 ```
 
 # <h3 id="git_bash_code">3.Git Bash乱码问题</h3>
 
-```
+```bash
 cat >> /etc/bash.bashrc << EOF
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
@@ -169,7 +171,7 @@ EOF
 
 # <h3 id="vps_ipv6_only">1.纯 IPv6 怎么访问 IPv4</h3>
 
-```
+```bash
 wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh 4
 ```
 
@@ -177,13 +179,13 @@ wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh 4
 
 `debian`
 
-```
+```bash
 sed -i 's/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/' /etc/gai.conf
 ```
 
 __撤回ipv6优先__
 
-```
+```bash
 sed -i 's/precedence ::ffff:0:0\/96  100/#precedence ::ffff:0:0\/96  100/' /etc/gai.conf
 ```
 
@@ -195,7 +197,7 @@ __{% post_link re-os DD 系统 %}__
 
 # <h3 id="screen_usage">基本用法</h3>
 
-```
+```bash
 # 创建
 screen cmd
 
