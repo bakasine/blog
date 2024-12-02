@@ -5,6 +5,7 @@ tags:
 	- frp
 categories: 
     - tool
+    - network
 ---
 
 [安装](#ins)
