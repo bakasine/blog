@@ -27,7 +27,7 @@ categories:
 
 # <h2 id="Prometheus">安装 prometheus</h2>
 
-`docker run -d -p 9090:9090 -v /root/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`
+`docker run -d --name prometheus -p 9090:9090 -v /root/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus --storage.tsdb.retention.time=14d`
 
 * 如果报错需要手动创建/root/prometheus/prometheus.yml
 

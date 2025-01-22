@@ -23,6 +23,10 @@ date: 2023-10-30 14:18:32
 
 | **[girigirilove](https://anime.girigirilove.com)** | **[nyafun](https://www.nyafun.net/)** | **[bilibili](https://www.bilibili.com)** |
 
+# <h3 id="anime_source">二次元 - 资源</h3>
+
+| **[H次元](https://h-ciyuan.com)** 
+
 # <h3 id="anime_tool">二次元 - 搜图工具</h3>
 
 | **[saucenao](https://saucenao.com/)** | **[google搜图](https://www.google.com/imghp)** |  **[bing搜图](https://www.bing.com/images/feed)** | **[yandex搜图](https://yandex.com/images)** |
@@ -54,7 +58,7 @@ date: 2023-10-30 14:18:32
 
 | **[价格排行](https://tld-list.com/)** | **[free.hr](https://subreg.cz/en/)** | **[eu.org](https://nic.eu.org/)** | 
 
-# <h2 id="domain" style="color:#FF8C00">域名</h2>
+# <h2 id="email" style="color:#FF8C00">邮箱</h2>
 
 | **[輔英科技大學](https://aspstd.fy.edu.tw/StdNew/)** | **[湖北工业大学](https://xmail.hbut.edu.cn/)** |
 
