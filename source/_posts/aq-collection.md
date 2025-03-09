@@ -38,6 +38,11 @@ categories:
 - [__八. Screen 相关__](#screen)
   + [1.基本用法](#screen_usage)
 
+- [__九. Windows 相关__](#win)
+  + [1.关闭更新](#win_upgrade)
+  + [2.系统激活](#win_activation)
+  + [3.Windows Defender 卸载](#win_defender)
+
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
 # <h3 id="ssh_keepalive">1.SSH 如何保持连接不自动断开</h3>
@@ -210,3 +215,27 @@ screen -ls
 # 重新连接
 screen -r 编号
 ```
+
+# <h2 id="win">Windows 相关</h3>
+
+# <h3 id="win_upgrade">关闭更新</h3>
+
+`1.PowerShell管理员模式执行`
+
+```
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v FlightSettingsMaxPauseDays /t reg_dword /d 3000 /f
+```
+
+`2.去设置修改暂停更新时间`
+
+# <h3 id="win_activation">系统激活</h3>
+
+[Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+
+```
+irm https://get.activated.win | iex
+```
+
+# <h3 id="win_defender">Windows Defender 卸载</h3>
+
+[windows-defender-remover](https://github.com/ionuttbara/windows-defender-remover)
