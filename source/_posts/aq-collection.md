@@ -42,6 +42,7 @@ categories:
   + [1.关闭更新](#win_upgrade)
   + [2.系统激活](#win_activation)
   + [3.Windows Defender 卸载](#win_defender)
+  + [4.缺少 DLL 文件](#win_dll)
 
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
@@ -239,3 +240,9 @@ irm https://get.activated.win | iex
 # <h3 id="win_defender">Windows Defender 卸载</h3>
 
 [windows-defender-remover](https://github.com/ionuttbara/windows-defender-remover)
+
+# <h3 id="win_dll">缺少 DLL 文件</h3>
+
+```
+sfc /scannow
+```
