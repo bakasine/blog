@@ -9,6 +9,8 @@ date: 2023-10-30 14:18:32
 **[论坛](#bbs)**
 **[AI模型](#aimodel)**
 **[工具](#tool)**
+**[出处](#source)**
+**[TG频道](#tg)**
 **[游戏](#game)**
 **[破解软件](#crack)**
 **[DNS](#dns)**
@@ -16,6 +18,7 @@ date: 2023-10-30 14:18:32
 **[邮箱](#email)**
 **[接码平台](#sms)**
 **[挖矿](#mining)**
+**[废弃](#deprecated)**
 
 # <h2 id="anime" style="color:#FF8C00">二次元</h2>
 
@@ -41,10 +44,19 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="tool" style="color:#FF8C00">工具</h2>
 
-| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** | **[FC2出处](https://db.msin.jp/?njp)** | **[图床](https://mjj.today/)** | **[免费代理](http://free-proxy.cz/zh/)** | **[M3U8下载](https://github.com/Momo707577045/media-source-extract)** | **[PDF编辑](https://www.sejda.com)** | **[Warp生成](https://fscarmen.cloudflare.now.cc)** | **[QQ泄漏数据查询](https://zy.xywlapi.cc/home.html)** | **[圈X规则库](https://whatshub.top/quantumultx)** 
+| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[图片压缩](https://tinypng.com/)** | **[GIF工具](https://ezgif.com/reverse)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** | **[图床](https://mjj.today/)** | **[免费代理](http://free-proxy.cz/zh/)** | **[M3U8下载](https://github.com/Momo707577045/media-source-extract)** | **[PDF编辑](https://www.sejda.com)** | **[Warp生成](https://fscarmen.cloudflare.now.cc)** | **[QQ泄漏数据查询](https://zy.xywlapi.cc/home.html)** | **[圈X规则库](https://whatshub.top/quantumultx)** 
 
+# <h2 id="source" style="color:#FF8C00">出处</h2>
+
+| **[女优出处](https://av-wiki.net/)** |
 
 # <h2 id="game" style="color:#FF8C00">游戏</h2>
+
+| **[小叽资源](https://steamzg.com/)** |
+
+# <h2 id="tg" style="color:#FF8C00">TG频道</h2>
+
+| **[自用](https://t.me/bakahentailolicon)** | **[烧鸡同好社](https://t.me/hdshaoji)** | **[游戏修改器](https://t.me/mygametrainer)** | **[可食用ASMR](https://t.me/asmr_online)** | **[ASMR录播收藏夹](https://t.me/+xzL2E63clBVkNTll)** | **[ASMR梦境岛](https://t.me/erojpasmr)** |
 
 # <h2 id="crack" style="color:#FF8C00">破解软件</h2>
 
@@ -69,3 +81,7 @@ date: 2023-10-30 14:18:32
 # <h2 id="mining" style="color:#FF8C00">挖矿</h2>
 
 | **[矿池统计](https://miningpoolstats.stream/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[算力租赁](https://www.miningrigrentals.com/)** | **[挖矿收益排行](https://poolbay.io/miners-profitability/cpu)** |
+
+# <h2 id="deprecated" style="color:#FF8C00">废弃</h2>
+
+| **[FC2出处](https://db.msin.jp/?njp)** |
