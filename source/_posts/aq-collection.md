@@ -13,6 +13,7 @@ categories:
 - [__二. SSH 相关问题__](#ssh)
   + [1.SSH如何保持连接不自动断开](#ssh_keepalive)
   + [2.SSH使用跳板机](#ssh_jump)
+  + [3.SSH滚轮变成浏览历史命令](#ssh_scroll)
 
 - [__三. Linux 相关问题__](#linux)
   + [1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
@@ -79,6 +80,15 @@ Host target
  Port 
  ProxyCommand ssh jump -W %h:%p
 ```
+
+# <h3 id="ssh_scroll">3.SSH 滚轮变成浏览历史命令</h3>
+
+windows terminal 使用 git bash 的情况下 -> 注释掉 `/etc/inputrc` 这两行
+```
+bind '"\e[5~": history-search-backward'
+bind '"\e[6~": history-search-forward'
+```
+
 
 # <h2 id="linux" style="color:#FF8C00">Linux 相关问题</h2>
 
