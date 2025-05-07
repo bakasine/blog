@@ -2,7 +2,7 @@
 title: Meta AI开源抠图模型使用
 date: 2023-04-06 16:36:26
 tags:
-	- cutout
+    - cutout
 categories: 
     - others
 ---

@@ -2,7 +2,7 @@
 title: 通过 Frp 实现内网穿透
 date: 2024-09-23 19:19:39
 tags:
-	- frp
+    - frp
 categories: 
     - tool
     - network

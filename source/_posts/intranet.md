@@ -2,7 +2,7 @@
 title: 通过 ZeroTier 将多台设备组成内网
 date: 2024-12-03 19:19:39
 tags:
-	- zerotier
+    - zerotier
 categories: 
     - network
 ---

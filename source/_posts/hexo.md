@@ -2,10 +2,10 @@
 title: GitHub + Hexo 搭建博客
 date:  2018-05-26 01:59:25
 tags: 
-  - hexo
-  - github
+    - hexo
+    - github
 categories: 
-  - others
+    - others
 ---
 
 ## 事先准备

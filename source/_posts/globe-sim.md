@@ -2,7 +2,7 @@
 title: 菲律宾Globe零月租手机卡申请和保号
 date: 2023-04-02 15:48:05
 tags:
-	- sim
+    - sim
 categories: 
     - others
 ---

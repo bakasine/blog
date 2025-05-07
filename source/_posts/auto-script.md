@@ -2,9 +2,9 @@
 title: 简单的自动抢购脚本编写方法
 date: 2021-08-19 19:19:39
 tags:
-	- linux
-	- shell
-	- nodejs
+    - linux
+    - shell
+    - nodejs
 categories: 
     - linux
 ---

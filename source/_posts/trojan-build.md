@@ -2,8 +2,8 @@
 title: xray架设trojan节点
 date: 2022-09-03 11:27:45
 tags:
-	- trojan
-	- xray
+    - trojan
+    - xray
 categories: 
     - tools
 ---

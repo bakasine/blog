@@ -2,11 +2,11 @@
 title: Debian(Ubuntu)网络安装/重装系统一键脚本
 date: 2018-06-26 23:19:36
 tags: 
-        - linux
-        - debian
-        - ubuntu
+    - linux
+    - debian
+    - ubuntu
 categories: 
-        - linux
+    - linux
 ---
 
 > 更新于 2023-11-26 22:12:21

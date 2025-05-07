@@ -2,11 +2,11 @@
 title: V2Ray+WebSocket+TLS+Nginx一键安装脚本
 date: 2020-02-23 23:19:36
 tags: 
-        - linux
-        - debian
-        - ubuntu
+    - linux
+    - debian
+    - ubuntu
 categories: 
-        - proxy
+    - proxy
 ---
 
 > 更新于 2022-09-14 22:12:21

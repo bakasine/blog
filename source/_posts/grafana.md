@@ -2,7 +2,7 @@
 title: Prometheus + Grafana 搭建服务器监控系统
 date: 2024-12-14 19:19:39
 tags:
-	- prometheus
+    - prometheus
     - grafana
     - docker
 categories: 

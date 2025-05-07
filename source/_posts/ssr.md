@@ -2,11 +2,11 @@
 title: SSR一键安装整合
 date: 2020-02-23 23:19:36
 tags: 
-        - SSR
-        - debian
-        - ubuntu
+    - SSR
+    - debian
+    - ubuntu
 categories: 
-        - linux
+    - linux
 ---
 
 > 逗比
