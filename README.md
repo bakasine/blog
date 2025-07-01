@@ -28,6 +28,8 @@ npm install --save hexo-renderer-sass-next
 npm un hexo-renderer-marked --save
 npm i hexo-renderer-markdown-it --save
 
+npm install hexo
+
 ```
 
 # Hexo
