@@ -61,7 +61,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="tg" style="color:#FF8C00">TG频道</h2>
 
-| **[自用](https://t.me/bakahentailolicon)** | **[烧鸡同好社](https://t.me/hdshaoji)** | **[游戏修改器](https://t.me/mygametrainer)** | **[可食用ASMR](https://t.me/asmr_online)** | **[ASMR录播收藏夹](https://t.me/+xzL2E63clBVkNTll)** | **[ASMR梦境岛](https://t.me/erojpasmr)** |
+| **[自用](https://t.me/+xlBfDZR-f6cwMWJl)** | **[烧鸡同好社](https://t.me/hdshaoji)** | **[游戏修改器](https://t.me/mygametrainer)** | **[可食用ASMR](https://t.me/+nAl2v4bisP45M2U1)** | **[ASMR录播收藏夹](https://t.me/+xzL2E63clBVkNTll)** | **[ASMR梦境岛](https://t.me/erojpasmr)** |
 
 # <h2 id="crack" style="color:#FF8C00">破解软件</h2>
 
