@@ -5,6 +5,7 @@ tags:
     - vim
 categories: 
     - note
+    - linux
 ---
 
 ```

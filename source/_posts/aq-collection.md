@@ -19,6 +19,7 @@ categories:
   + [1.Sed -e expression #1, char 14: unknown option to 's'](#sed_err1)
   + [2.安装应用后提示 Which services should be restarted](#needrestart)
   + [3.解决 vim 使用鼠标选择便进入 visual mode 的问题](#visualmode)
+  + __{% post_link top Top 命令 %}__
 
 - [__四. Git 相关问题__](#git)
   + [1.删除Git仓库中的大文件](#git_rm_large_file)
