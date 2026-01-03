@@ -10,6 +10,7 @@ categories:
 [__安装 WordPress__](#ins)
 [__创建伪授权脚本__](#fake)
 [__上传主题并注入补丁__](#patch)
+[__(可选) 安装 Caddy 通过反向代理__](#caddy)
 
 # <h2 id="ins">安装 WordPress</h2>
 
@@ -32,6 +33,8 @@ services:
     expose:
       - 3306
       - 33060
+    networks:
+      - wp-network
   wordpress:
     image: wordpress:latest
     ports:
@@ -39,6 +42,7 @@ services:
     # 核心修改 1：劫持 api.zibll.com 到容器自身
     extra_hosts:
       - "api.zibll.com:127.0.0.1"
+      - "www.zibll.com:127.0.0.1"
     restart: always
     environment:
       - WORDPRESS_DB_HOST=db
@@ -50,8 +54,14 @@ services:
       # 核心修改 2：将伪授权脚本映射到容器路径
       - ./fake-api/api/auth:/var/www/html/api/auth
       - ./fake-api/api/auth:/var/www/html/api/update
+    networks:
+      - wp-network
 volumes:
-  db_data
+  db_data:
+networks:
+  wp-network:
+    name: wp-network
+    driver: bridge
 ```
 
 # <h2 id="fake">创建伪授权脚本</h2>
@@ -102,6 +112,8 @@ elseif(strpos($url, '/api/update') !== false){
 
 # <h2 id="patch">上传主题并注入补丁</h2>
 
+[__下载主题__](/file/zibll.zip)
+
 * __(可选) 如果主题上传失败__
 
 ```bash
@@ -119,6 +131,14 @@ EOF
 ```php
 add_filter('pre_http_request', function($pre, $args, $url) {
     if (strpos($url, 'api.zibll.com') !== false) {
+        $url = str_replace('https://', 'http://', $url);
+        $args['sslverify'] = false;
+        return wp_remote_request($url, $args);
+    }
+    return $pre;
+}, 10, 3);
+add_filter('pre_http_request', function($pre, $args, $url) {
+    if (strpos($url, 'www.zibll.com') !== false) {
         $url = str_replace('https://', 'http://', $url);
         $args['sslverify'] = false;
         return wp_remote_request($url, $args);
@@ -175,4 +195,78 @@ docker exec -i wordpress-db-1 mysql -uwordpress -pwordpress wordpress <<'EOF'
 DELETE FROM wp_options WHERE option_name LIKE '_transient_zibll_auth%';
 DELETE FROM wp_options WHERE option_name LIKE 'zibll_auth%';
 EOF
+```
+
+# <h2 id="caddy">(可选) 安装 Caddy 通过反向代理</h2>
+
+```yaml
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy-server
+    restart: unless-stopped
+    ports:
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./data:/data
+      - ./config:/config
+    networks:
+      - wp-network
+
+networks:
+  wp-network:
+    external: true
+```
+
+* 编写 Caddyfile 文件
+
+```
+你的域名 {
+    # 自动 HTTPS 证书申请
+
+    # 1. 开启压缩（提升加载速度，减少卡顿）
+    encode gzip zstd
+
+    # 2. 静态文件缓存优化（吸收了你提供的配置优点）
+    # 注意：反代模式下，这些头部会附加在从 WordPress 传回的资源上
+    @static {
+        path_regexp static \.(?:css|js|woff2?|svg|gif|png|jpg|webp|jpeg|mp4|mp3|ico)$
+    }
+    header @static {
+        Cache-Control "public, max-age=15778463"
+        X-Content-Type-Options "nosniff"
+    }
+
+    # 3. 安全过滤（禁止访问敏感文件）
+    @disallowed {
+        path *.sql
+        path /wp-content/uploads/*.php
+        path /wp-content/debug.log
+        path /xmlrpc.php
+    }
+    respond @disallowed 403
+
+    # 4. 核心反代逻辑
+    reverse_proxy wordpress-wordpress-1:80 {
+        # 强制协议识别，解决后台卡顿和重定向循环
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto https
+
+        # 解决大文件上传进度条卡死
+        flush_interval -1
+    }
+
+    # 5. 上传限制（配合子比主题 7M+ 的需求）
+    request_body {
+        max_size 128MB
+    }
+
+    # 错误日志记录（方便排查为何卡顿）
+    log {
+        output file /data/access.log
+    }
+}
 ```
