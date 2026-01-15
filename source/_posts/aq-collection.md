@@ -47,6 +47,9 @@ categories:
   + [3.Windows Defender 卸载](#win_defender)
   + [4.缺少 DLL 文件](#win_dll)
 
+- [__十. AI 相关__](#ai)
+  + __{% post_link ailist AI 工具列表 %}__
+
 # <h2 id="ssh" style="color:#FF8C00">SSH 相关问题</h2>
 
 # <h3 id="ssh_keepalive">1.SSH 如何保持连接不自动断开</h3>
