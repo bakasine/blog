@@ -12,6 +12,7 @@ categories:
 - [__配置第三方 API__](#third_party_api)
   + [__1. CLI__](#claude_cli)
   + [__2. VS Code__](#claude_vscode)
+- [__跳过首次登陆__](#skip_first_login)
 
 # <h2 id="third_party_api">配置第三方 API</h2>
 
@@ -48,4 +49,14 @@ export ANTHROPIC_MODEL=gpt-5.4
     "value": "gpt-5.4"
   }
 ]
+```
+
+# <h2 id="skip_first_login">跳过首次登陆</h2>
+
+在 `~/.claude.json` 配置文件里添加以下字段：
+
+```json
+{
+  "hasCompletedOnboarding": true
+}
 ```
