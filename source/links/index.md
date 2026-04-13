@@ -13,6 +13,7 @@ date: 2023-10-30 14:18:32
 **[出处](#source)**
 **[TG频道](#tg)**
 **[游戏](#game)**
+**[注册用](#register)**
 **[破解软件](#crack)**
 **[DNS](#dns)**
 **[域名](#domain)**
@@ -54,6 +55,11 @@ date: 2023-10-30 14:18:32
 # <h2 id="source" style="color:#FF8C00">出处</h2>
 
 | **[黑料](https://www.hl718.com/)** | **[女优WIKI](https://av-wiki.net/)** | **[女优出处](https://seesaawiki.jp/avsagasou/)** |
+
+# <h2 id="register" style="color:#FF8C00">注册用</h2>
+
+| **[Scribd](https://www.scribd.com/document/680427153/PASSPORT-1)** |
+
 
 # <h2 id="game" style="color:#FF8C00">游戏</h2>
 
