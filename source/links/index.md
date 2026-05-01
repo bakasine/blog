@@ -63,7 +63,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="game" style="color:#FF8C00">游戏</h2>
 
-| **[小叽资源](https://steamzg.com/)** |
+| **[小叽资源](https://steamzg.com/)** | **[鲲Galgame](https://www.kungal.com/)** |
 
 # <h2 id="tg" style="color:#FF8C00">TG频道</h2>
 
