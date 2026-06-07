@@ -46,7 +46,7 @@ date: 2023-10-30 14:18:32
 
 # <h2 id="tool" style="color:#FF8C00">工具</h2>
 
-| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** | **[图床](https://mjj.today/)** | **[免费代理](http://free-proxy.cz/zh/)** | **[M3U8下载](https://github.com/Momo707577045/media-source-extract)** | **[PDF编辑](https://www.sejda.com)** | **[Warp生成](https://fscarmen.cloudflare.now.cc)** | **[QQ泄漏数据查询](https://www.xywlapi.cc/home.html)** | **[圈X规则库](https://whatshub.top/quantumultx)** | **[B站视频下载](https://www.xbeibeix.com/api/bilibili)** | **[泄露数据综合查询](https://qb.heikebook.com/index)** |  
+| **[朋友圈生成工具](https://github.com/TransparentLC/WechatMomentScreenshot)** | **[Favicon生成](https://favicon.io/favicon-converter/)** | **[在线抠图](https://pixian.ai/)** | **[图床](https://mjj.today/)** | **[免费代理](http://free-proxy.cz/zh/)** | **[M3U8下载](https://github.com/Momo707577045/media-source-extract)** | **[PDF编辑](https://www.sejda.com)** | **[Warp生成](https://fscarmen.cloudflare.now.cc)** | **[QQ泄漏数据查询](https://www.xywlapi.cc/home.html)** | **[圈X规则库](https://whatshub.top/quantumultx)** | **[B站视频下载](https://www.xbeibeix.com/api/bilibili)** | **[泄露数据综合查询](https://qb.heikebook.com/)** |  
 
 # <h2 id="media" style="color:#FF8C00">媒体处理</h2>
 
