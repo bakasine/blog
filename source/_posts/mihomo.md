@@ -12,10 +12,10 @@ categories:
 ---
 
 [Windows 步骤](#win)
-- [安装 nssm 并配置服务](#nssm)
-- [mihomo 关键配置](#config)
+  + [安装 nssm 并配置服务](#nssm)
+  + [mihomo 关键配置](#config)
 [Mac 步骤](#mac)
-- [安装 mihomo 服务](#install)
+  + [安装 mihomo 服务](#install)
 
 # <h1 id="win">Windows 步骤</h1>
 
