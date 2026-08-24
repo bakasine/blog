@@ -44,7 +44,7 @@ external-ui-url: "https://gh-proxy.org/https://github.com/MetaCubeX/metacubexd/a
 `安装`
 
 ```
-# homebrew
+# homebrew 不支持 root 所以不支持 tun 不建议用
 brew install mihomo
 
 # macports
@@ -57,10 +57,10 @@ sudo port install mihomo
 # 把 iCloud 的配置文件链接到指定目录 (可选)
 
 # Macports
-ln -s ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/local/etc/mihomo/config.yaml
+ln -sf ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/local/etc/mihomo/config.yaml
 
 # Homebrew
-ln -s ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/homebrew/etc/mihomo/config.yaml
+ln -sf ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/homebrew/etc/mihomo/config.yaml
 ```
 
 `Macports`
