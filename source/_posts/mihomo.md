@@ -11,11 +11,11 @@ categories:
     - tool
 ---
 
-- [Windows 步骤](#win)
-  + [安装 nssm 并配置服务](#nssm)
-  + [mihomo 关键配置](#config)
-- [Mac 步骤](#mac)
-  + [安装 mihomo 服务](#install)
+[Windows 步骤](#win)
+- [安装 nssm 并配置服务](#nssm)
+- [mihomo 关键配置](#config)
+[Mac 步骤](#mac)
+- [安装 mihomo 服务](#install)
 
 # <h1 id="win">Windows 步骤</h1>
 
@@ -55,7 +55,12 @@ sudo port install mihomo
 
 ```
 # 把 iCloud 的配置文件链接到指定目录 (可选)
-ln -s ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents /opt/local/etc/mihomo/config.yaml
+
+# Macports
+ln -s ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/local/etc/mihomo/config.yaml
+
+# Homebrew
+ln -s ~/Library/Mobile\ Documents/iCloud\~com\~metacubex\~ClashX/Documents/config.yaml /opt/homebrew/etc/mihomo/config.yaml
 ```
 
 `Macports`
@@ -75,11 +80,11 @@ sudo port unload mihomo
 
 ```
 ## 启动服务 + 开机启动
-sudo brew services start mihomo
+brew services start mihomo
 
 ## 重启服务
-sudo brew services restart mihomo
+brew services restart mihomo
 
 ## 关闭服务
-sudo brew services stop mihomo
+brew services stop mihomo
 ```
