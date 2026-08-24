@@ -44,7 +44,7 @@ external-ui-url: "https://gh-proxy.org/https://github.com/MetaCubeX/metacubexd/a
 `安装`
 
 ```
-# homebrew 不支持 root 所以不支持 tun 不建议用
+# homebrew
 brew install mihomo
 
 # macports
@@ -87,4 +87,10 @@ brew services restart mihomo
 
 ## 关闭服务
 brew services stop mihomo
+
+## 1. 给 mihomo 赋权
+sudo chown root:wheel $(brew --prefix)/bin/mihomo
+
+## 2. 赋予 SUID 权限（允许普通用户启动时以 root 权限运行）
+sudo chmod u+s $(brew --prefix)/bin/mihomo
 ```
